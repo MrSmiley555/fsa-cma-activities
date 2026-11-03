@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="دليل تفاعلي لترخيص الجهات العاملة في مجال الأوراق المالية وفق اللائحة التنفيذية لقانون الأوراق المالية (خ/11/2026). Interactive licensing guide for Operating Entities in the securities field.">
+<meta property="og:title" content="دليل ترخيص الجهات العاملة | Operating Entity Licensing Guide">
+<meta property="og:description" content="الأنشطة، رأس المال، الرسوم، المستندات والالتزامات في مكان واحد. Activities, capital, fees, documents and obligations in one place.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B4F74">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>دليل ترخيص الجهات العاملة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: Apple-style chapters — one calm column, full-bleed alternating bands, a sticky glass nav, and one strong interactive moment (the calculator). Bilingual: dir/lang switch on <html>. */
+:root{
+  --bg:#FBFBFD; --band:#F3F5F7; --surface:#FFFFFF; --ink:#1D1D1F; --ink-2:#5F6670; --ink-3:#8A9099;
+  --line:rgba(16,32,48,.10); --brand:#0B4F74; --brand-soft:rgba(11,79,116,.08); --gold:#A9823F; --gold-soft:rgba(169,130,63,.12);
+  --ok:#1F7A4D; --ok-soft:rgba(31,122,77,.10); --warn:#9A5B00; --warn-soft:rgba(154,91,0,.10);
+  --glass:rgba(251,251,253,.78); --shadow:0 1px 2px rgba(16,32,48,.04),0 8px 28px rgba(16,32,48,.06);
+  --f-ar:"IBM Plex Sans Arabic","SF Arabic","Segoe UI","Tahoma",sans-serif;
+  --f-en:"IBM Plex Sans","SF Pro Text","Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --r-lg:24px; --r-md:16px; --r-sm:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0A0C0F; --band:#111418; --surface:#171B20; --ink:#F2F3F5; --ink-2:#A7AEB8; --ink-3:#7D848E;
+  --line:rgba(255,255,255,.10); --brand:#6DB3DC; --brand-soft:rgba(109,179,220,.12); --gold:#D3B074; --gold-soft:rgba(211,176,116,.14);
+  --ok:#5CC48D; --ok-soft:rgba(92,196,141,.12); --warn:#E0A84D; --warn-soft:rgba(224,168,77,.12);
+  --glass:rgba(10,12,15,.72); --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0A0C0F; --band:#111418; --surface:#171B20; --ink:#F2F3F5; --ink-2:#A7AEB8; --ink-3:#7D848E;
+  --line:rgba(255,255,255,.10); --brand:#6DB3DC; --brand-soft:rgba(109,179,220,.12); --gold:#D3B074; --gold-soft:rgba(211,176,116,.14);
+  --ok:#5CC48D; --ok-soft:rgba(92,196,141,.12); --warn:#E0A84D; --warn-soft:rgba(224,168,77,.12);
+  --glass:rgba(10,12,15,.72); --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-ar);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+html[lang="en"] body{font-family:var(--f-en);line-height:1.65}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--glass)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{background:var(--band)}
+section{padding-block:88px}
+h1,h2,h3{text-wrap:balance;margin:0;font-weight:700;letter-spacing:-.01em}
+html[lang="en"] h1,html[lang="en"] h2{letter-spacing:-.025em}
+p{margin:0}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+a{color:var(--brand)}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:6px}
+
+/* Nav */
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--glass);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;gap:18px;height:52px}
+.mark{display:flex;flex-direction:column;line-height:1.25;color:var(--ink);text-decoration:none;white-space:nowrap}
+.mark b{font-size:14px;font-weight:700}
+.mark small{font-size:10px;color:var(--ink-2);letter-spacing:.02em}
+.links{display:flex;gap:18px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.links::-webkit-scrollbar{display:none}
+.links a{font-size:13px;color:var(--ink-2);text-decoration:none;white-space:nowrap}
+.links a:hover{color:var(--ink)}
+.lang{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;font:inherit;font-size:13px;padding:5px 12px;cursor:pointer;white-space:nowrap;font-family:var(--f-en)}
+html[lang="en"] .lang{font-family:var(--f-ar)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;font:inherit;font-weight:500;cursor:pointer;text-decoration:none;transition:transform .15s ease,background .2s}
+.btn:active{transform:scale(.97)}
+.btn-p{background:var(--brand);color:var(--bg);padding:10px 22px;font-size:15px}
+.btn-s{background:transparent;color:var(--brand);padding:10px 4px;font-size:15px}
+.btn-s::after{content:"‹";font-size:18px;line-height:1}
+html[dir="ltr"] .btn-s::after{content:"›"}
+nav .btn-p{padding:6px 14px;font-size:13px;white-space:nowrap}
+@media (max-width:520px){nav .btn-p{display:none}}
+
+/* Hero */
+.hero{padding-block:96px 72px;text-align:center}
+.eyebrow{font-size:14px;font-weight:600;color:var(--gold);letter-spacing:.02em}
+.hero h1{font-size:clamp(36px,6.4vw,68px);line-height:1.15;margin-top:14px}
+.hero p.lead{font-size:clamp(17px,2.2vw,22px);color:var(--ink-2);max-width:660px;margin:20px auto 0;line-height:1.7}
+.cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-radius:var(--r-lg);overflow:hidden;margin-top:64px;border:1px solid var(--line)}
+.fact{background:var(--surface);padding:24px 16px;text-align:center}
+.fact b{display:block;font-size:clamp(26px,3.4vw,36px);font-weight:600;letter-spacing:-.01em}
+.fact span{font-size:13px;color:var(--ink-2)}
+@media (max-width:720px){.facts{grid-template-columns:repeat(2,1fr)}}
+
+/* Section head */
+.sh{text-align:center;max-width:720px;margin:0 auto 48px}
+.sh h2{font-size:clamp(30px,4.6vw,48px);line-height:1.2;margin-top:10px}
+.sh p{color:var(--ink-2);font-size:18px;margin-top:14px}
+.ref{display:inline-block;font-size:12px;font-weight:600;color:var(--brand);background:var(--brand-soft);border-radius:999px;padding:1px 9px;white-space:nowrap;line-height:1.9}
+
+/* Path */
+.path{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{background:var(--surface);border-radius:var(--r-lg);padding:28px 24px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px;min-width:0}
+.step .n{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--brand);color:var(--brand);display:grid;place-items:center;font-weight:600;font-size:15px}
+.step h3{font-size:20px}
+.step p{color:var(--ink-2);font-size:15px}
+.step .ref{align-self:flex-start}
+.step .clock{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:14px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.step .clock b{font-size:18px;color:var(--ink)}
+@media (max-width:900px){.path{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.path{grid-template-columns:1fr}}
+.note{margin-top:24px;display:flex;gap:12px;align-items:flex-start;background:var(--warn-soft);border-radius:var(--r-md);padding:16px 20px;font-size:15px}
+.note b{color:var(--warn);flex:none}
+
+/* Explorer */
+.filters{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 16px;font:inherit;font-size:14px;cursor:pointer;transition:background .2s,color .2s}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip:disabled{opacity:.4;cursor:not-allowed}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border-radius:var(--r-lg);padding:24px;border:1px solid var(--line);text-align:start;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;gap:14px;transition:transform .2s ease,box-shadow .2s ease;min-width:0}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card .cat{font-size:12px;color:var(--ink-3);font-weight:600}
+.card h3{font-size:19px;line-height:1.45}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.card .kv{margin-top:auto}
+.kv div{background:var(--band);border-radius:var(--r-sm);padding:10px 12px;min-width:0}
+.kv small{display:block;font-size:12px;color:var(--ink-2)}
+.kv strong{font-size:16px;font-weight:600}
+.card .more{font-size:14px;color:var(--brand);display:flex;justify-content:space-between;align-items:center;gap:8px}
+.tag{font-size:11px;font-weight:600;border-radius:999px;padding:2px 8px;background:var(--gold-soft);color:var(--gold)}
+.card.bundle{background:linear-gradient(160deg,var(--brand-soft),var(--surface) 60%)}
+.bundles-h{font-size:22px;margin:56px 0 16px;text-align:center}
+.grid.two{grid-template-columns:1fr 1fr}
+@media (max-width:640px){.grid.two{grid-template-columns:1fr}}
+
+/* Dialog */
+dialog{border:0;padding:0;border-radius:28px;max-width:640px;width:calc(100% - 32px);background:var(--surface);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35);max-height:88vh}
+dialog::backdrop{background:rgba(0,0,0,.4);backdrop-filter:blur(6px)}
+.dlg{padding:32px;overflow-y:auto;max-height:88vh}
+.dlg header{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.dlg h3{font-size:26px;line-height:1.35}
+.x{border:0;background:var(--band);color:var(--ink);width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;flex:none}
+.dlg .kv{grid-template-columns:repeat(3,1fr);margin:22px 0}
+@media (max-width:520px){.dlg{padding:24px}.dlg .kv{grid-template-columns:1fr 1fr}}
+.dlg h4{font-size:15px;margin:22px 0 8px;color:var(--ink-2);font-weight:600}
+.dlg ul{margin:0;padding-inline-start:20px;display:grid;gap:6px}
+.dlg li{font-size:15px}
+.dlg .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.refs{display:flex;gap:6px;flex-wrap:wrap}
+
+/* Calculator */
+.calc{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;align-items:start}
+@media (max-width:880px){.calc{grid-template-columns:1fr}}
+.panel{background:var(--surface);border-radius:var(--r-lg);padding:24px;box-shadow:var(--shadow);min-width:0}
+.seg{display:inline-flex;background:var(--band);border-radius:999px;padding:3px;gap:2px;width:100%}
+.seg button{flex:1;border:0;background:transparent;font:inherit;font-size:14px;padding:8px 10px;border-radius:999px;cursor:pointer;color:var(--ink-2)}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);font-weight:600;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.quick{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 6px;align-items:center;font-size:13px;color:var(--ink-2)}
+.quick .chip{font-size:13px;padding:5px 12px}
+.rows{display:grid;margin-top:8px}
+.row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.row:last-child{border-bottom:0}
+.row .t{font-size:15px;line-height:1.5;min-width:0}
+.row .t small{display:block;color:var(--ink-3);font-size:12px}
+.row.off{opacity:.42;cursor:not-allowed}
+.sw{position:relative;width:46px;height:28px;flex:none}
+.sw input{position:absolute;opacity:0;inset:0;margin:0;cursor:inherit}
+.sw span{position:absolute;inset:0;background:var(--line);border-radius:999px;transition:background .2s}
+.sw span::after{content:"";position:absolute;top:3px;inset-inline-start:3px;width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .2s}
+.sw input:checked+span{background:var(--ok)}
+.sw input:checked+span::after{transform:translateX(-18px)}
+html[dir="ltr"] .sw input:checked+span::after{transform:translateX(18px)}
+.sw input:focus-visible+span{outline:2px solid var(--brand);outline-offset:2px}
+.sum{position:sticky;top:76px}
+.sum .big{font-size:clamp(38px,5vw,52px);font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.sum .cur{font-size:16px;color:var(--ink-2);font-weight:500}
+.sum .lbl{font-size:13px;color:var(--ink-2)}
+.lines{display:grid;margin-top:20px;border-top:1px solid var(--line)}
+.ln{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.ln span:first-child{color:var(--ink-2)}
+.ln b{font-weight:600}
+.ln.disc b{color:var(--ok)}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:999px;background:var(--ok-soft);color:var(--ok)}
+.tiers{display:flex;gap:4px;margin-top:16px}
+.tiers div{flex:1;text-align:center;font-size:11px;padding:6px 0;border-radius:6px;background:var(--band);color:var(--ink-3);line-height:1.5}
+.tiers div.on{background:var(--ok);color:var(--surface);font-weight:600}
+.bundlehit{margin-top:14px;font-size:13px;background:var(--brand-soft);border-radius:var(--r-sm);padding:10px 12px}
+.fine{font-size:12px;color:var(--ink-3);margin-top:14px;line-height:1.7}
+
+/* Checklist */
+.cl-head{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+.cl-head .seg{width:auto;flex:1;max-width:600px}
+.prog{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--ink-2)}
+.bar{width:140px;height:6px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ok);width:0;transition:width .3s}
+.items{display:grid}
+.it{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:start;padding:16px 4px;border-bottom:1px solid var(--line);cursor:pointer;position:relative}
+.it:last-child{border-bottom:0}
+.box{width:22px;height:22px;border-radius:7px;border:1.5px solid var(--ink-3);display:grid;place-items:center;margin-top:3px;transition:all .15s}
+.it input{position:absolute;opacity:0;pointer-events:none}
+.it input:checked~.box{background:var(--ok);border-color:var(--ok)}
+.it input:checked~.box::after{content:"";width:6px;height:11px;border:solid var(--surface);border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.it input:focus-visible~.box{outline:2px solid var(--brand);outline-offset:2px}
+.it .txt{font-size:15px;min-width:0}
+.it input:checked~.txt{color:var(--ink-3)}
+details.sub{margin-top:8px}
+details.sub summary{font-size:13px;color:var(--brand);cursor:pointer;list-style:none}
+details.sub summary::-webkit-details-marker{display:none}
+details.sub ol{margin:10px 0 0;padding-inline-start:22px;font-size:14px;color:var(--ink-2);display:grid;gap:4px}
+.cl-foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:16px;align-items:center}
+.ghost{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:8px 16px;font:inherit;font-size:14px;cursor:pointer}
+.ghost-row{display:flex;gap:8px;flex-wrap:wrap}
+
+/* Rules */
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line)}
+@media (max-width:700px){.rules{grid-template-columns:1fr}}
+.rule{background:var(--surface);padding:26px 24px;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.rule h3{font-size:18px}
+.rule p{color:var(--ink-2);font-size:15px}
+
+/* Obligations */
+.ob{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.ob{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.ob{grid-template-columns:1fr}}
+.obc{background:var(--surface);border-radius:var(--r-lg);padding:22px;border:1px solid var(--line);display:flex;flex-direction:column;gap:8px;min-width:0}
+.obc .when{font-size:13px;font-weight:600;color:var(--gold)}
+.obc h3{font-size:17px;line-height:1.5}
+.obc p{font-size:14px;color:var(--ink-2)}
+.obc .ref{align-self:flex-start;margin-top:auto}
+.freq{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+
+/* Review */
+.review{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;max-width:900px;margin:0 auto;padding:0;list-style:none}
+@media (max-width:700px){.review{grid-template-columns:1fr}}
+.review li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.review li::before{content:"✓";color:var(--ok);font-weight:700}
+
+/* Regulations */
+.docs{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:880px;margin:0 auto}
+@media (max-width:640px){.docs{grid-template-columns:1fr}}
+.doc{display:grid;grid-template-columns:96px 1fr;gap:20px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;text-decoration:none;color:inherit;transition:transform .2s ease,box-shadow .2s ease;min-width:0}
+.doc:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.cover{aspect-ratio:3/4;border-radius:8px;background:linear-gradient(170deg,var(--brand),color-mix(in srgb,var(--brand) 70%,#000));color:#fff;padding:10px 9px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 8px 18px rgba(0,0,0,.18);position:relative;overflow:hidden}
+.cover::before{content:"";position:absolute;inset:auto -20% -30% auto;width:90%;aspect-ratio:1;border-radius:50%;background:var(--gold);opacity:.35}
+.cover b{font-size:9px;line-height:1.35;position:relative;font-weight:600}
+.cover span{font-size:8px;opacity:.8;position:relative}
+.doc h3{font-size:18px}
+.doc p{font-size:13px;color:var(--ink-2);margin-top:4px}
+.doc .open{margin-top:12px;font-size:14px;color:var(--brand);font-weight:500}
+.keyarts{margin:28px auto 0;text-align:center;font-size:14px;color:var(--ink-2);display:flex;gap:8px;justify-content:center;flex-wrap:wrap;align-items:center}
+
+/* Contact */
+.contact{max-width:640px;margin:0 auto;background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:28px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
+@media (max-width:520px){.contact{grid-template-columns:1fr;text-align:center;justify-items:center}}
+.avatar{width:64px;height:64px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font-weight:700;font-size:24px}
+.contact h3{font-size:20px}
+.contact .role{font-size:14px;color:var(--ink-2)}
+.mail{display:inline-block;margin-top:8px;font-family:var(--f-en);font-size:15px;user-select:all;direction:ltr;unicode-bidi:isolate;word-break:break-all}
+.contact .ghost-row{margin-top:12px}
+@media (max-width:520px){.contact .ghost-row{justify-content:center}}
+
+/* Final + footer */
+.final{text-align:center}
+.final h2{font-size:clamp(30px,4.6vw,48px)}
+.final p{color:var(--ink-2);font-size:18px;margin:14px auto 0;max-width:560px}
+footer{border-top:1px solid var(--line);font-size:12px;color:var(--ink-3);line-height:1.9}
+footer .wrap{padding-block:28px;display:grid;gap:10px}
+footer b{color:var(--ink-2)}
+</style>
+</head>
+<body>
+
+<nav class="top" aria-label="Navigation">
+  <div class="wrap">
+    <a class="mark" href="#top"><b data-i="brand"></b><small data-i="brand2"></small></a>
+    <div class="links">
+      <a href="#path" data-i="n_path"></a>
+      <a href="#activities" data-i="n_act"></a>
+      <a href="#calc" data-i="n_calc"></a>
+      <a href="#docs" data-i="n_docs"></a>
+      <a href="#after" data-i="n_after"></a>
+      <a href="#regs" data-i="n_regs"></a>
+      <a href="#contact" data-i="n_contact"></a>
+    </div>
+    <button class="lang" type="button" id="lang"></button>
+    <a class="btn btn-p" href="https://fsa.gov.om/Home/ecma?serviceId=1119&type=CompanyService" target="_blank" rel="noopener" data-i="n_apply"></a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow" data-i="h_eye"></div>
+    <h1 data-i="h_t"></h1>
+    <p class="lead" data-i="h_lead"></p>
+    <div class="cta">
+      <a class="btn btn-p" href="#activities" data-i="h_c1"></a>
+      <a class="btn btn-s" href="#calc" data-i="h_c2"></a>
+    </div>
+    <div class="facts">
+      <div class="fact"><b class="num">12</b><span data-i="f1"></span></div>
+      <div class="fact"><b class="num">4</b><span data-i="f2"></span></div>
+      <div class="fact"><b class="num">15</b><span data-i="f3"></span></div>
+      <div class="fact"><b class="num">30%</b><span data-i="f4"></span></div>
+    </div>
+  </div>
+</header>
+
+<section class="band" id="path">
+  <div class="wrap">
+    <div class="sh"><div class="eyebrow" data-i="p_eye"></div><h2 data-i="p_t"></h2><p data-i="p_p"></p></div>
+    <div class="path" id="steps"></div>
+    <div class="note"><b data-i="p_nb"></b><span data-i="p_note"></span></div>
+  </div>
+</section>
+
+<section id="activities">
+  <div class="wrap">
+    <div class="sh"><div class="eyebrow" data-i="a_eye"></div><h2 data-i="a_t"></h2><p data-i="a_p"></p></div>
+    <div class="filters" id="filters" role="group"></div>
+    <div class="grid" id="grid"></div>
+    <h3 class="bundles-h" data-i="a_b"></h3>
+    <div class="grid two" id="bundles"></div>
+  </div>
+</section>
+
+<dialog id="dlg" aria-labelledby="dlg-t"><div class="dlg" id="dlg-body"></div></dialog>
+
+<section class="band" id="calc">
+  <div class="wrap">
+    <div class="sh"><div class="eyebrow" data-i="c_eye"></div><h2 data-i="c_t"></h2><p data-i="c_p"></p></div>
+    <div class="calc">
+      <div class="panel">
+        <div class="seg" role="group">
+          <button type="button" id="t-nat" aria-pressed="true" data-i="c_nat"></button>
+          <button type="button" id="t-for" aria-pressed="false" data-i="c_for"></button>
+        </div>
+        <div class="quick" id="quick"></div>
+        <div class="rows" id="rows"></div>
+      </div>
+      <aside class="panel sum" aria-live="polite">
+        <div class="lbl" data-i="s_total"></div>
+        <div><span class="big num" id="s-total">0</span> <span class="cur" data-i="omr"></span></div>
+        <div class="lbl" id="s-count" style="margin-top:6px"></div>
+        <div class="tiers" id="tiers" aria-hidden="true"></div>
+        <div class="lines">
+          <div class="ln"><span data-i="s_study"></span><b class="num" id="s-study">500</b></div>
+          <div class="ln"><span data-i="s_lic"></span><b class="num" id="s-lic">0</b></div>
+          <div class="ln disc"><span id="s-dlbl"></span><b class="num" id="s-disc">0</b></div>
+          <div class="ln"><span data-i="s_ren"></span><b class="num" id="s-ren">0</b></div>
+          <div class="ln"><span data-i="s_cap"></span><b class="num" id="s-cap">0</b></div>
+          <div class="ln" id="s-parent-row" hidden><span data-i="s_parent"></span><b class="num">2,000,000</b></div>
+          <div class="ln"><span data-i="s_bg"></span><b class="num" id="s-bg">0</b></div>
+        </div>
+        <div class="bundlehit" id="s-bundle" hidden></div>
+        <p class="fine" id="s-fine"></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="docs">
+  <div class="wrap">
+    <div class="sh"><div class="eyebrow" data-i="d_eye"></div><h2 data-i="d_t"></h2><p data-i="d_p"></p></div>
+    <div class="panel">
+      <div class="cl-head">
+        <div class="seg" role="group" id="cl-tabs"></div>
+        <div class="prog"><span class="num" id="cl-count">0 / 0</span><div class="bar"><i id="cl-bar"></i></div></div>
+      </div>
+      <div class="items" id="cl-items"></div>
+      <div class="cl-foot">
+        <span class="fine" style="margin:0" data-i="d_lang"></span>
+        <div class="ghost-row">
+          <button class="ghost" type="button" id="cl-copy" data-i="d_copy"></button>
+          <button class="ghost" type="button" id="cl-reset" data-i="d_reset"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="rules">
+  <div class="wrap">
+    <div class="sh"><div class="eyebrow" data-i="r_eye"></div><h2 data-i="r_t"></h2></div>
+    <div class="rules" id="rules-list"></div>
+  </div>
+</section>
+
+<section id="after">
+  <div class="wrap">
+    <div class="sh"><div class="eyebrow" data-i="o_eye"></div><h2 data-i="o_t"></h2><p data-i="o_p"></p></div>
+    <div class="freq" id="freq" role="group"></div>
+    <div class="ob" id="ob"></div>
+  </div>
+</section>
+
+<section class="band" id="review">
+  <div class="wrap">
+    <div class="sh"><div class="eyebrow" data-i="v_eye"></div><h2 data-i="v_t"></h2></div>
+    <ul class="review" id="review-list"></ul>
+  </div>
+</section>
+
+<section id="regs">
+  <div class="wrap">
+    <div class="sh"><div class="eyebrow" data-i="g_eye"></div><h2 data-i="g_t"></h2><p data-i="g_p"></p></div>
+    <div class="docs">
+      <a class="doc" href="regulation-ar.pdf" target="_blank" rel="noopener">
+        <div class="cover" aria-hidden="true" dir="rtl"><b>اللائحة التنفيذية لقانون الأوراق المالية</b><span>خ/11/2026</span></div>
+        <div><h3 data-i="g_ar"></h3><p data-i="g_ar_m"></p><div class="open" data-i="g_open"></div></div>
+      </a>
+      <a class="doc" href="regulation-en.pdf" target="_blank" rel="noopener">
+        <div class="cover" aria-hidden="true" dir="ltr"><b>Executive Regulations of the Securities Law</b><span>No. 11/2026</span></div>
+        <div><h3 data-i="g_en"></h3><p data-i="g_en_m"></p><div class="open" data-i="g_open"></div></div>
+      </a>
+    </div>
+    <div class="keyarts" data-i="g_keys"></div>
+  </div>
+</section>
+
+<section class="band" id="contact">
+  <div class="wrap">
+    <div class="sh"><div class="eyebrow" data-i="k_eye"></div><h2 data-i="k_t"></h2><p data-i="k_p"></p></div>
+    <div class="contact">
+      <div class="avatar" aria-hidden="true" data-i="k_ini"></div>
+      <div>
+        <h3 data-i="k_name"></h3>
+        <div class="role" data-i="k_role"></div>
+        <span class="mail" id="mail">nabras.alkhanjari@fsa.gov.om</span>
+        <div class="ghost-row">
+          <button class="ghost" type="button" id="mail-copy" data-i="k_copy"></button>
+          <a class="ghost" href="mailto:nabras.alkhanjari@fsa.gov.om" style="text-decoration:none" data-i="k_send"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 data-i="z_t"></h2>
+    <p data-i="z_p"></p>
+    <div class="cta">
+      <a class="btn btn-p" href="https://fsa.gov.om/Home/ecma?serviceId=1119&type=CompanyService" target="_blank" rel="noopener" data-i="z_new"></a>
+      <a class="btn btn-s" href="https://fsa.gov.om/Home/ecma?serviceId=1117&type=CompanyService" target="_blank" rel="noopener" data-i="z_ren"></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p data-i="ft1"></p>
+    <p data-i="ft2"></p>
+    <p data-i="ft3"></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+const PORTAL="https://fsa.gov.om/Home/ecma?serviceId=1119&type=CompanyService";
+let lang="ar";try{const s=localStorage.getItem("fsa-lang");if(s==="en"||s==="ar")lang=s}catch(e){}
+const L=x=>x&&typeof x==="object"&&!Array.isArray(x)?x[lang]:x;
+const fmt=n=>Math.round(n).toLocaleString("en-US");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const R=s=>`<span class="ref">${s}</span>`;
+const art=n=>lang==="ar"?`المادة ${n}`:`Article ${n}`;
+const m=n=>lang==="ar"?`م ${n}`:`Art. ${n}`;
+
+const T={
+ brand:{ar:"هيئة الخدمات المالية",en:"Financial Services Authority"},
+ brand2:{ar:"Financial Services Authority",en:"هيئة الخدمات المالية"},
+ n_path:{ar:"المسار",en:"Process"},n_act:{ar:"الأنشطة",en:"Activities"},n_calc:{ar:"حاسبة الرسوم",en:"Fee calculator"},n_docs:{ar:"المستندات",en:"Documents"},n_after:{ar:"بعد الترخيص",en:"After licensing"},n_regs:{ar:"اللائحة",en:"Regulations"},n_contact:{ar:"تواصل معنا",en:"Contact"},n_apply:{ar:"قدّم الطلب",en:"Apply"},
+ h_eye:{ar:"الجهات العاملة في مجال الأوراق المالية",en:"Operating Entities in the Securities Field"},
+ h_t:{ar:"كل ما تحتاجه للترخيص،<br>في مكان واحد.",en:"Everything you need to get licensed,<br>in one place."},
+ h_lead:{ar:"استكشف الأنشطة، واحسب رأس المال والرسوم، وجهّز مستنداتك قبل التقديم عبر بوابة الهيئة. كل معلومة هنا مقرونة بمادتها من اللائحة.",en:"Explore the activities, estimate capital and fees, and prepare your documents before applying through the FSA portal. Every detail here is linked to its article in the Regulations."},
+ h_c1:{ar:"استكشف الأنشطة",en:"Explore activities"},h_c2:{ar:"احسب الرسوم",en:"Estimate fees"},
+ f1:{ar:"نشاطاً مرخصاً",en:"licensable activities"},f2:{ar:"مراحل حتى بدء النشاط",en:"stages to commencement"},f3:{ar:"يوم عمل للبت في كل موافقة",en:"working days per approval decision"},f4:{ar:"أقصى خصم عند تعدد التراخيص",en:"maximum multi-license discount"},
+ p_eye:{ar:"مسار الترخيص",en:"Licensing process"},p_t:{ar:"أربع مراحل واضحة.",en:"Four clear stages."},p_p:{ar:"من طلب الموافقة المبدئية حتى مزاولة النشاط.",en:"From initial approval to commencing activity."},
+ p_nb:{ar:"تنبيه",en:"Note"},
+ p_note:{ar:"يُعتبر مضي مدة البت في طلب الترخيص دون رد رفضاً للطلب. ويجوز للهيئة منح مدة محددة لاستكمال بعض المستندات بعد الترخيص، وإلا عُدّ الترخيص ملغى من تاريخ انتهائها. <span class=\"ref\">المادة 45</span>",en:"The lapse of the decision period without a response is deemed a rejection. The FSA may grant a set period to complete some documents after licensing; otherwise the license is deemed cancelled when that period ends. <span class=\"ref\">Article 45</span>"},
+ a_eye:{ar:"مستكشف الأنشطة",en:"Activity explorer"},a_t:{ar:"اختر النشاط. اعرف متطلباته.",en:"Pick an activity. Know what it takes."},a_p:{ar:"اضغط على أي نشاط لمعرفة ما يشمله، ورأس ماله، ورسومه.",en:"Tap any activity to see what it covers, its capital and its fees."},a_b:{ar:"الأنشطة المركّبة",en:"Combined activities"},
+ c_eye:{ar:"حاسبة الرسوم ورأس المال",en:"Fee and capital calculator"},c_t:{ar:"اعرف التكلفة قبل أن تبدأ.",en:"Know the cost before you start."},c_p:{ar:"اختر الأنشطة، وتُحسب لك الحدود الدنيا لرأس المال والرسوم والخصم تلقائياً.",en:"Choose your activities to see minimum capital, fees and discounts calculated automatically."},
+ c_nat:{ar:"شركة وطنية",en:"National company"},c_for:{ar:"فرع شركة أجنبية",en:"Foreign company branch"},
+ s_total:{ar:"إجمالي ما يُسدد عند الترخيص لأول مرة",en:"Total payable at initial licensing"},omr:{ar:"ر.ع",en:"OMR"},
+ s_study:{ar:"رسم دراسة الطلب",en:"Application review fee"},s_lic:{ar:"رسوم الترخيص قبل الخصم",en:"License fees before discount"},s_ren:{ar:"رسم التجديد السنوي بعد الخصم",en:"Annual renewal after discount"},s_cap:{ar:"الحد الأدنى لرأس المال وحقوق الملكية",en:"Minimum capital and equity"},s_parent:{ar:"رأس مال الجهة الأم (حد أدنى)",en:"Parent entity capital (minimum)"},s_bg:{ar:"الضمان المصرفي",en:"Bank guarantee"},
+ d_eye:{ar:"قائمة المستندات",en:"Document checklist"},d_t:{ar:"جهّز ملفك خطوة بخطوة.",en:"Build your file, step by step."},d_p:{ar:"علّم على ما أنجزته. تُحفظ علاماتك في متصفحك.",en:"Tick what you have completed. Your progress is saved in your browser."},
+ d_lang:{ar:"يجب أن تكون جميع المستندات المقدمة باللغة العربية، ويجوز أن تقترن بالإنجليزية. <span class=\"ref\">المادة 4</span>",en:"All documents must be in Arabic and may be accompanied by English. <span class=\"ref\">Article 4</span>"},
+ d_copy:{ar:"نسخ القائمة",en:"Copy list"},d_reset:{ar:"مسح العلامات",en:"Clear ticks"},
+ r_eye:{ar:"قبل أن تتقدم",en:"Before you apply"},r_t:{ar:"قواعد أساسية تحكم كل طلب.",en:"Core rules for every application."},
+ o_eye:{ar:"بعد الترخيص",en:"After licensing"},o_t:{ar:"التزامات مستمرة، بمواعيد محددة.",en:"Ongoing obligations, on a set schedule."},o_p:{ar:"ما يجب على الجهة العاملة تقديمه للهيئة بعد حصولها على الترخيص.",en:"What the Operating Entity must provide to the FSA once licensed."},
+ v_eye:{ar:"راجع طلبك",en:"Review your application"},v_t:{ar:"قبل أن تضغط «تقديم».",en:"Before you press “Submit”."},
+ g_eye:{ar:"المرجع",en:"Reference"},g_t:{ar:"اللائحة التنفيذية بين يديك.",en:"The Executive Regulations, at hand."},g_p:{ar:"النص الكامل للائحة التنفيذية لقانون الأوراق المالية باللغتين، للرجوع السريع.",en:"The full text of the Executive Regulations of the Securities Law in both languages, for quick reference."},
+ g_ar:{ar:"النسخة العربية",en:"Arabic version"},g_en:{ar:"النسخة الإنجليزية",en:"English version"},
+ g_ar_m:{ar:"القرار رقم خ/11/2026 · 80 صفحة · PDF",en:"Decision No. Kh/11/2026 · 80 pages · PDF"},g_en_m:{ar:"Decision No. 11/2026 · 78 صفحة · PDF",en:"Decision No. 11/2026 · 78 pages · PDF"},
+ g_open:{ar:"فتح الملف ‹",en:"Open document ›"},
+ g_keys:{ar:"أهم المواد للترخيص: <span class=\"ref\">36–48 الترخيص</span> <span class=\"ref\">58–71 الأنشطة</span> <span class=\"ref\">72–87 الالتزامات</span> <span class=\"ref\">ملحق الرسوم</span>",en:"Key provisions: <span class=\"ref\">36–48 Licensing</span> <span class=\"ref\">58–71 Activities</span> <span class=\"ref\">72–87 Obligations</span> <span class=\"ref\">Fees Annex</span>"},
+ k_eye:{ar:"تواصل معنا",en:"Contact us"},k_t:{ar:"لديك استفسار؟",en:"Have a question?"},k_p:{ar:"لأي استفسار عن متطلبات الترخيص قبل التقديم.",en:"For any question about licensing requirements before you apply."},
+ k_ini:{ar:"ن",en:"N"},k_name:{ar:"نبراس الخنجري",en:"Nabras Al Khanjari"},k_role:{ar:"أخصائي تنظيم وترخيص · هيئة الخدمات المالية",en:"Regulation and Licensing Specialist · Financial Services Authority"},
+ k_copy:{ar:"نسخ البريد",en:"Copy email"},k_send:{ar:"إرسال بريد",en:"Send email"},
+ z_t:{ar:"جاهز للتقديم؟",en:"Ready to apply?"},z_p:{ar:"يُقدَّم طلب الترخيص وطلب التجديد إلكترونياً عبر بوابة الهيئة.",en:"New license and renewal applications are submitted online through the FSA portal."},
+ z_new:{ar:"طلب ترخيص جديد",en:"New license application"},z_ren:{ar:"تجديد ترخيص",en:"License renewal"},
+ ft1:{ar:"<b>تنبيه قانوني:</b> هذا الدليل مرجع إرشادي لتيسير تقديم الطلب ولا يحل محل نص القانون أو اللائحة أو النماذج والتعليمات التي تصدرها الهيئة. وللهيئة طلب أي بيانات أو مستندات إضافية بحسب طبيعة النشاط والطلب.",en:"<b>Legal notice:</b> This guide is an aid to preparing your application and does not replace the Law, the Regulations, or the forms and instructions issued by the FSA. The FSA may request any additional data or documents depending on the nature of the activity and the application."},
+ ft2:{ar:"<b>مرجع التطبيق:</b> يُرجع عند أي تعارض أو غموض إلى النص الرسمي للائحة التنفيذية لقانون الأوراق المالية الصادرة بالقرار رقم خ/11/2026 وملحق رسوم الخدمات، وإلى النماذج والتعليمات والقرارات الصادرة عن هيئة الخدمات المالية.",en:"<b>Reference:</b> In case of any conflict or ambiguity, the official text of the Executive Regulations of the Securities Law issued by Decision No. 11/2026 and its Fees Annex, and the forms, instructions and decisions of the Financial Services Authority, prevail."},
+ ft3:{ar:"المبالغ بالريال العماني. هيئة الخدمات المالية، سلطنة عمان.",en:"Amounts in Omani Rials. Financial Services Authority, Sultanate of Oman."}
+};
+
+const STEPS=[
+ {t:{ar:"الموافقة المبدئية",en:"Initial approval"},d:{ar:"تقديم الطلب على النموذج المعد مع 8 مستندات وبيانات، وسداد رسم دراسة الطلب (500 ر.ع).",en:"Submit the application on the prescribed form with 8 documents and data, and pay the application review fee (OMR 500)."},r:{ar:"المادة 42",en:"Article 42"},n:"15",c:{ar:"يوم عمل للبت من تاريخ استكمال المستندات",en:"working days to decide, from completion of documents"}},
+ {t:{ar:"استكمال التأسيس",en:"Incorporation"},d:{ar:"تسجيل الجهة في السجل التجاري واستكمال كافة الإجراءات المقررة قانوناً، وإلا اعتُبرت الموافقة كأن لم تكن.",en:"Register the entity in the Commercial Register and complete all legally required procedures, otherwise the approval is deemed void."},r:{ar:"المادة 43",en:"Article 43"},n:"6",c:{ar:"أشهر كحد أقصى من تاريخ الموافقة",en:"months maximum from the approval date"}},
+ {t:{ar:"الموافقة النهائية",en:"Final approval"},d:{ar:"تقديم الطلب مع 10 مستندات، منها الضمان المصرفي ووثيقة التأمين، وسداد رسوم الترخيص.",en:"Submit the application with 10 documents, including the bank guarantee and insurance policy, and pay the licensing fees."},r:{ar:"المادتان 44 و45",en:"Articles 44–45"},n:"15",c:{ar:"يوم عمل للبت من تاريخ استكمال المستندات",en:"working days to decide, from completion of documents"}},
+ {t:{ar:"الترخيص وبدء النشاط",en:"License and commencement"},d:{ar:"يصدر الترخيص بقرار من الرئيس التنفيذي مبيناً فيه الأنشطة المرخصة، ومدته سنة تُجدد سنوياً.",en:"The license is issued by decision of the Executive President specifying the licensed activities. It runs for one year and is renewed annually."},r:{ar:"المواد 45 إلى 48",en:"Articles 45–48"},n:"30",c:{ar:"يوماً لبدء النشاط، قابلة للمد مدة مماثلة",en:"days to commence, extendable for a similar period"}}
+];
+
+const CATS={inv:{ar:"إدارة الاستثمار",en:"Investment management"},mkt:{ar:"التداول والسوق",en:"Trading and markets"},cap:{ar:"الإصدارات والبحث",en:"Issuance and research"},cus:{ar:"الحفظ والوكالة",en:"Custody and agency"}};
+const A=[
+ {id:"brk",n:{ar:"الوساطة",en:"Brokerage"},c:"mkt",cap:700000,fee:5000,ren:2000,art:"38/10",f:false,
+  inc:{ar:["تنفيذ أوامر البيع والشراء لحساب العاملين لديها أو لحساب عملائها، مع التقيد بالضوابط الصادرة عن البورصة (م302).","يجوز لها تلقي طلبات الاكتتاب بأي وسيلة من خلال الربط مع نظام الاكتتاب الإلكتروني لدى مؤسسة الإيداع (م134)."],en:["Executing buy and sell orders for its employees or clients, in compliance with the controls issued by the Stock Exchange (Art. 302).","May receive subscription applications by any means through a link to the depository institution's electronic subscription system (Art. 134)."]},
+  note:{ar:"يُحظر عليها استغلال أوامر التداول الخاصة بمتعاملين آخرين وإجراء تداولات استباقية (م303).",en:"It may not exploit other consumers' trading orders or carry out front-running trades (Art. 303)."},a2:{ar:"المواد 134 و302 و303",en:"Articles 134, 302, 303"}},
+ {id:"mm",n:{ar:"صناعة السوق",en:"Market making"},c:"mkt",cap:5000000,fee:2500,ren:1000,art:"38/11",f:false,
+  inc:{ar:["تضع البورصة وتدير متطلبات عمل صانع السوق ومزود السيولة (م24/8)."],en:["The Stock Exchange establishes and manages the operational requirements for market makers and liquidity providers (Art. 24/8)."]},note:{ar:"أعلى حد أدنى لرأس المال بين الأنشطة.",en:"The highest minimum capital of all activities."}},
+ {id:"mrg",n:{ar:"التمويل الهامشي",en:"Margin financing"},c:"mkt",cap:200000,fee:2500,ren:1000,art:"38/12",f:false,
+  inc:{ar:["تضع البورصة وتدير متطلبات عمل نشاط التمويل الهامشي (م24/10)."],en:["The Stock Exchange establishes and manages the operational requirements for margin financing (Art. 24/10)."]},note:{ar:"لا يجوز للجهة العاملة الحصول على فوائد من المتعامل مقابل المبالغ المستحقة لها ما لم تكن مرخصة في مزاولة نشاط التمويل الهامشي (م74/7).",en:"An Operating Entity may not charge consumers interest on amounts due to it unless licensed for margin financing (Art. 74/7)."}},
+ {id:"cus",n:{ar:"الحفظ والأمانة",en:"Custodian"},c:"cus",cap:3000000,fee:5000,ren:3000,art:"38/1",f:false,
+  inc:{ar:["الاحتفاظ بالأوراق المالية والأموال الخاصة بالمتعاملين في حسابات منفصلة.","ضمان حفظ وسلامة الأوراق المالية والحقوق المرتبطة بها، كتسلم الأرباح والتصويت والاكتتاب.","ضمان دقة التعاملات التي تنفذها الجهة المرخصة في نشاط الوساطة.","تسلم وحفظ ودفع أموال المتعاملين لتسوية التعاملات.","تزويد المتعامل بتقارير دورية عن محافظه وحساباته النقدية (م59)."],en:["Holding consumers' securities and funds in separate accounts.","Safekeeping securities and their attached rights, such as dividends, voting and subscription.","Ensuring the accuracy of transactions executed by brokerage-licensed entities.","Receiving, holding and paying consumers' funds to settle transactions.","Providing consumers with periodic reports on their portfolios and cash accounts (Art. 59)."]},a2:{ar:"المادتان 58 و59",en:"Articles 58–59"}},
+ {id:"str",n:{ar:"هيكلة المنتجات",en:"Product structuring"},c:"inv",cap:1000000,fee:15000,ren:10000,art:"38/2",f:false,
+  inc:{ar:["استحداث وإدارة وتوزيع منتجات مهيكلة مبنية على أوراق مالية أو مؤشرات أو أي منتج يمكن أن يطرح ويتداول في أي بورصة.","يجوز لها استحداث شركات ذات غرض خاص (SPV) واستخدام أدوات الرفع المالي والتوريق."],en:["Developing, managing and distributing structured products based on securities, indices or any product that may be offered and traded on a stock exchange.","May establish special purpose vehicles (SPVs) and use financial leverage and securitization tools."]},note:{ar:"مع مراعاة الضوابط الصادرة عن البنك المركزي العماني في مجال توريق القروض.",en:"Taking into account the Central Bank of Oman's regulations on loan securitization."},a2:{ar:"المادة 70",en:"Article 70"}},
+ {id:"pm",n:{ar:"إدارة محافظ الأوراق المالية",en:"Securities portfolio management"},c:"inv",cap:200000,fee:10000,ren:5000,art:"38/3",f:false,
+  inc:{ar:["تكوين محافظ الأوراق المالية للأفراد والأشخاص الاعتبارية وتخصيص الأصول وفق سياسة الاستثمار المعتمدة مع المتعامل.","إدارة محافظ العملاء الأفراد والمؤسسات ومتابعة تنفيذ أوامر البيع والشراء.","إدارة محافظ صناديق التقاعد أو صناديق الثروة السيادية.","إدارة حسابات العهدة، وإعادة توازن المحفظة."],en:["Establishing portfolios for individuals and legal persons and allocating assets per the investment policy agreed with the consumer.","Managing individual and institutional client portfolios and monitoring order execution.","Managing portfolios of pension funds or sovereign wealth funds.","Managing trust accounts and rebalancing portfolios."]},note:{ar:"يلزم إبرام عقد مع المتعامل وفق النموذج الذي تعده الهيئة (م61/3).",en:"A contract with the consumer on the FSA's prescribed form is required (Art. 61/3)."},a2:{ar:"المادتان 60 و61",en:"Articles 60–61"}},
+ {id:"fa",n:{ar:"إدارة صناديق الاستثمار الجماعي",en:"Collective investment fund management"},c:"inv",cap:200000,fee:10000,ren:5000,art:"38/4",f:false,
+  inc:{ar:["الإجراءات المتعلقة بإصدار واسترداد الوحدات الاستثمارية.","حفظ وتحديث سجلات الصندوق، وإدارة حوكمته، وعمليات المكتب الخلفي.","حساب صافي قيمة الأصول وسعر الإصدار والاسترداد (م63).","مراقبة عملية حل أو تصفية الصندوق."],en:["Procedures for issuing and redeeming investment units.","Maintaining the fund's records, managing its governance and back-office operations.","Calculating NAV and the issue and redemption prices (Art. 63).","Monitoring the dissolution or liquidation of the fund."]},a2:{ar:"المادتان 62 و63",en:"Articles 62–63"}},
+ {id:"im",n:{ar:"مدير الاستثمار",en:"Investment manager"},c:"inv",cap:200000,fee:10000,ren:5000,art:"38/5",f:false,
+  inc:{ar:["إدارة استثمارات صناديق الاستثمار الجماعي وفقاً لنشرة الإصدار والنظام الأساسي للصندوق.","دراسة المركز المالي للشركات والأصول التي تستثمر فيها أصول الصندوق.","اتخاذ القرارات الاستثمارية بما يحقق مصلحة الصندوق والمستثمرين.","توفير السيولة الكافية للصندوق، والإفصاح لحملة الوحدات."],en:["Managing the investments of collective investment funds per the Prospectus and the fund's articles of association.","Assessing the financial position of the companies and assets the fund invests in.","Making investment decisions in the interest of the fund and its investors.","Providing sufficient liquidity for the fund and disclosing to unitholders."]},a2:{ar:"المادة 64",en:"Article 64"}},
+ {id:"iss",n:{ar:"إدارة الإصدارات",en:"Issue management"},c:"cap",cap:200000,fee:15000,ren:5000,art:"38/6",f:true,
+  inc:{ar:["تولي مهام الإصدارات الأولية والمسؤولية أمام الهيئة عن استيفاء متطلباتها حتى الإدراج.","إعداد نشرة الإصدار وتقديمها للهيئة، والجهة مسؤولة عما تحويه من بيانات.","إدارة وتنظيم عملية إصدار الأوراق المالية.","تقديم المشورة للمصدرين بشأن هيكلة الإصدارات والاستحواذ والاندماج وشروط الطرح."],en:["Undertaking initial issuance duties and being responsible to the FSA for meeting their requirements until listing.","Preparing the Prospectus and submitting it to the FSA; the entity is responsible for its contents.","Managing and organizing the securities issuance process.","Advising issuers on issue structuring, acquisitions, mergers and offering terms."]},a2:{ar:"المادة 65",en:"Article 65"}},
+ {id:"rs",n:{ar:"البحث وتقديم المشورة المتعلقة بالاستثمار في الأوراق المالية المدرجة",en:"Research and advice related to investment in listed securities"},c:"cap",cap:200000,fee:10000,ren:5000,art:"38/7",f:true,
+  inc:{ar:["تقييم الأوراق المالية.","إعداد ونشر تقارير الدراسات والبحوث والتقارير المالية التحليلية.","تقديم خدمة الأخبار المالية.","تقديم المشورة بشأن الاحتفاظ بأوراق مالية مدرجة أو شرائها أو بيعها أو الاكتتاب فيها."],en:["Valuing securities.","Preparing and publishing studies, research and analytical financial reports.","Providing a financial news service.","Advising on holding, buying, selling or subscribing to listed securities."]},note:{ar:"لا يجوز لها تسلم أي أموال من المتعاملين مقابل استثماراتهم (م67/6). ولا يُعد من النشاط النشر الإعلامي العام غير المقرون بتوصية (م68).",en:"It may not receive any funds from consumers for their investments (Art. 67/6). General media publication not accompanied by a trading recommendation is not part of this activity (Art. 68)."},a2:{ar:"المواد 66 إلى 68",en:"Articles 66–68"}},
+ {id:"mk",n:{ar:"تسويق أوراق مالية غير عمانية",en:"Marketing of non-Omani securities"},c:"cap",cap:200000,fee:15000,ren:10000,art:"38/8",f:true,
+  inc:{ar:["التسويق وتقديم المشورة بشأن أوراق مالية ومنتجات تصدر عن جهات من خارج سلطنة عمان ومنظمة من هيئات رقابية أعضاء في IOSCO.","التسويق للمتعاملين من ذوي الخبرة في أسواق الأوراق المالية فقط، مع إثبات ذلك.","عدم استخدام وسائل الإعلام للتسويق، وعدم تسلم أي أموال من المتعاملين."],en:["Marketing and advising on securities and products issued outside Oman and regulated by IOSCO-member regulators.","Marketing only to consumers experienced in securities markets, with evidence of that experience.","Not using the media for marketing, and not receiving any funds from consumers."]},note:{ar:"تقدم بياناً سنوياً للهيئة وفق النموذج المعد (م82). ويستثنى ما يصدر في دول مجلس التعاون في اكتتاب عام.",en:"Submits an annual statement to the FSA on the prescribed form (Art. 82). Securities issued through public offerings in GCC states are excepted."},a2:{ar:"المادتان 69 و82",en:"Articles 69, 82"}},
+ {id:"ag",n:{ar:"وكيل حملة السندات أو ملاك الصكوك ووحدات الصناديق",en:"Agent for bondholders, Sukukholders or unitholders"},c:"cus",cap:200000,fee:5000,ren:3000,art:"38/9",f:false,
+  inc:{ar:["مراقبة تنفيذ الجهة المصدرة أو المستفيدة وشركة الغرض الخاص لالتزاماتها الواردة في نشرة الإصدار.","التأكد من دفع العوائد المستحقة في تاريخ الاستحقاق، ومتابعة كفاية الضمانات.","تمثيل حملة السندات أو ملاك الصكوك ورئاسة اجتماعات جمعيتهم العامة."],en:["Monitoring the issuer or beneficiary and the SPV in fulfilling their Prospectus obligations.","Ensuring returns are paid on the due date and monitoring the adequacy of guarantees.","Representing bondholders or Sukukholders and chairing their general assembly meetings."]},note:{ar:"يذكر ملحق الرسوم هذا النشاط باسم «وكيل حملة السندات أو ملاك الصكوك».",en:"The Fees Annex lists this activity as “Agent for bondholders or Sukukholders”."},a2:{ar:"المادة 71",en:"Article 71"}}
+];
+const B=[
+ {id:"am",n:{ar:"إدارة الأصول",en:"Asset management"},art:{ar:"المادة 39",en:"Article 39"},ids:["pm","im","str"],extra:{ar:"وأي أنشطة يوافق عليها المجلس.",en:"And any activities approved by the Board."}},
+ {id:"ib",n:{ar:"بنوك الاستثمار",en:"Investment banking"},art:{ar:"المادة 40",en:"Article 40"},ids:["im","str","pm","rs","iss"],extra:{ar:"ويجوز لبنوك الاستثمار في جميع الأحوال القيام بمهام متعهد التغطية للإصدارات المعتمدة من الهيئة.",en:"Investment banks may in all cases act as underwriters for issues approved by the FSA."}}
+];
+const byId=Object.fromEntries(A.map(a=>[a.id,a]));
+const discount=k=>k>=9?30:k>=7?25:k>=5?20:k===4?15:k===3?10:0;
+
+const ART5={ar:["الهيكل التنظيمي متضمناً السلطات والمهام والمسؤوليات وطريقة رفع التقارير.","أدلة العمل واللوائح التشغيلية والأنظمة الداخلية للأنشطة المرخصة.","سياسات وخطط الطوارئ ومتابعة استمرارية الأعمال.","الدورة المستندية الواجب اتباعها.","المستويات والصلاحيات المتعلقة بالموافقة على المصروفات والنفقات.","السياسات المتعلقة بالمشتريات وعقود الخدمة.","سياسات الموارد البشرية، ومنها الرواتب والتعيين والتطوير والتدريب والترقيات وإنهاء الخدمات.","سياسة الإحلال للوظائف المعتمدة (خطة التعاقب الوظيفي).","سياسة إدارة المخاطر والالتزام وآلية التعامل مع الأطراف ذات العلاقة.","إجراءات مكافحة غسل الأموال وتمويل الإرهاب والإبلاغ عن المخالفات وحالات الاشتباه.","إجراءات سلامة المعلومات وسريتها.","السياسات الاستثمارية.","قواعد السلوك المهني.","سياسات وإجراءات النظر في شكاوى المتعاملين وحلها والإبلاغ عن المخالفات وآلية تسوية المنازعات.","أي مسائل أخرى تقررها الهيئة."],
+ en:["Organizational structure, clarifying authorities, tasks, responsibilities and reporting lines.","Work manuals, operational regulations and internal rules for the licensed activities.","Emergency policies and plans, and business continuity monitoring.","The documentary cycle to be followed.","Levels and authorities for approving expenses and expenditures.","Procurement and service contract policies.","Human resources policies, including salaries, recruitment, development, training, promotions and termination.","Replacement policy for approved positions (succession plan).","Risk management and compliance policy, and the mechanism for dealing with related parties.","AML/CFT procedures, and the mechanism for reporting violations and suspicious cases.","Information security and confidentiality procedures.","Investment policies.","Rules of professional conduct.","Policies and procedures for consumer complaints, reporting violations and dispute settlement.","Any other matters determined by the FSA."]};
+const CL={
+ s1:{l:{ar:"الموافقة المبدئية",en:"Initial approval"},items:[
+  ["42/1",{ar:"التفويض الصادر عن المؤسسين أو أعضاء مجلس الجهة العاملة لمن ينوب عنهم في مباشرة إجراءات الحصول على الترخيص.",en:"Authorization from the founders or Board members to their representatives to carry out the licensing procedures."}],
+  ["42/2",{ar:"هيكل الملكية بأسماء المؤسسين وجنسياتهم ونسب تملكهم في رأس المال، وسلسلة هياكل الملكية بالنسبة للمؤسس الاعتباري.",en:"Ownership structure with the founders' names, nationalities and ownership percentages, and the chain of ownership for any founder that is a legal person."}],
+  ["42/3",{ar:"ما يفيد بأن المؤسسين لم تصدر ضد أي منهم خلال الأعوام الخمسة السابقة على الطلب أحكام قضائية بإشهار الإفلاس، أو بعقوبة في جناية أو جنحة مخلة بالشرف أو الأمانة، أو في إحدى الجرائم المنصوص عليها في القانون أو قانون الشركات التجارية، ما لم يكن قد رُد إليه اعتباره.",en:"Evidence that no founder has, in the five years before the application, been subject to a judicial ruling declaring bankruptcy, or a penalty for a felony or misdemeanor involving dishonesty or breach of trust, or for a crime under the Law or the Commercial Companies Law, unless rehabilitated."}],
+  ["42/4",{ar:"بيان الأنشطة المراد مزاولتها ورأس المال المقترح، بما لا يقل عن الحدود المبينة في اللائحة.",en:"Statement of the activities to be practiced and the proposed capital, not less than the limits set in the Regulations."}],
+  ["42/5",{ar:"خطة عمل تشمل نطاق العمل، وفئات العملاء المحتملين، والخدمات المتوقع تقديمها، وأي مخاطر استثمارية محتملة أو متوقعة وتدابير التعامل معها.",en:"Business plan covering the scope of work, potential client categories, expected services, and any potential or expected investment risks with measures to address them."}],
+  ["42/6",{ar:"إقرار وفق النموذج المعد يفيد بأن الجهة تملك الخبرات والأنظمة الإلكترونية والنظم المالية والتشغيلية الكافية وغيرها من المتطلبات اللازمة للوفاء بالتزامات الأنشطة.",en:"Declaration on the prescribed form that the entity has the expertise, electronic systems, and sufficient financial and operational systems to meet the obligations of the requested activities."}],
+  ["42/7",{ar:"ما يفيد سداد الرسم المقرر (رسم دراسة الطلب 500 ر.ع).",en:"Evidence of payment of the prescribed fee (OMR 500 application review fee)."}],
+  ["42/8",{ar:"أي بيانات أو مستندات أخرى تطلبها الهيئة.",en:"Any other data or documents requested by the FSA."}]]},
+ s2:{l:{ar:"الموافقة النهائية",en:"Final approval"},items:[
+  ["44/1",{ar:"نسخة من شهادة القيد في السجل التجاري.",en:"Copy of the Commercial Register certificate."}],
+  ["44/2",{ar:"بيان بأعضاء المجلس والإدارة التنفيذية ومؤهلاتهم وخبراتهم، بمن فيهم مسؤول الالتزام والمدير المالي.",en:"Statement of Board members and executive management with their qualifications and experience, including the compliance officer and financial manager."}],
+  ["44/3",{ar:"إقرار من أعضاء المجلس والعاملين في الإدارة التنفيذية بما يفيد حسن سمعتهم وعدم صدور الأحكام المشار إليها في البند 42/3 ضد أي منهم خلال الأعوام الخمسة السابقة.",en:"Declaration by Board members and executive management of their good reputation, and that none has been subject to the rulings in item 42/3 in the past five years."}],
+  ["44/4",{ar:"بيان باستيفاء الحد الأدنى من العاملين ومؤهلاتهم العلمية وخبراتهم العملية طبقاً لما تقرره الهيئة.",en:"Statement of meeting the minimum number of employees and their academic qualifications and experience, as determined by the FSA."}],
+  ["44/5",{ar:"ضمان مصرفي غير مشروط صادر عن أحد المصارف المرخصة في سلطنة عمان يعادل 1% من رأس المال المطلوب: من 2,000 إلى 15,000 ر.ع للشركة الوطنية، و50,000 ر.ع لفرع الشركة الأجنبية.",en:"Unconditional bank guarantee from a bank licensed in Oman equal to 1% of the required capital: OMR 2,000 to 15,000 for a national company; OMR 50,000 for a foreign branch."}],
+  ["44/6",{ar:"وثيقة تأمين ضد المسؤولية المهنية.",en:"Professional indemnity insurance policy."}],
+  ["44/7",{ar:"ما يفيد تعيين مراقب حسابات من المكاتب المعتمدة لدى الهيئة.",en:"Evidence of appointing an auditor from the firms approved by the FSA."}],
+  ["44/8",{ar:"ما يفيد توفر النظم المالية والإلكترونية اللازمة لمزاولة الأنشطة.",en:"Evidence that the financial and electronic systems needed for the activities are in place."}],
+  ["44/9",{ar:"نسخة من اللوائح والسياسات والإجراءات المنظمة لأعمال الجهة، معتمدة من أعضاء المجلس أو المفوضين في الإدارة التنفيذية، وبالأخص المشار إليها في المادة 5.",en:"Copy of the regulations, policies and procedures governing the entity's business, approved by the Board or authorized executives, in particular those in Article 5."},1],
+  ["44/10",{ar:"سداد الرسم المقرر (رسوم الترخيص).",en:"Payment of the prescribed fee (licensing fees)."}]]},
+ s3:{l:{ar:"فرع شركة أجنبية",en:"Foreign branch"},items:[
+  [{ar:"44 فروع/1",en:"44 Branch/1"},{ar:"ما يفيد موافقة الجهة الرقابية في بلد المقر الرئيسي على مزاولة أنشطة الجهات العاملة، وأن الجهة الأم ليست خاضعة لإجراءات قانونية قد تؤثر على مركزها المالي أو قدرتها على الوفاء بالمتطلبات التنظيمية للهيئة.",en:"Evidence of the home regulator's approval to practice Operating Entity activities, and that the parent is not subject to legal proceedings that may affect its financial position or ability to meet FSA requirements."}],
+  [{ar:"44 فروع/2",en:"44 Branch/2"},{ar:"نسخة طبق الأصل من شهادة ترخيص الجهة العاملة الأم في البلد الأصلي.",en:"True copy of the parent's license certificate in the home country."}],
+  [{ar:"44 فروع/3",en:"44 Branch/3"},{ar:"نسخة من التقارير السنوية للجهة الأم متضمنة البيانات المالية المدققة عن آخر 3 سنوات.",en:"The parent's annual reports, including audited financial statements for the last 3 years."}],
+  [{ar:"44 فروع/4",en:"44 Branch/4"},{ar:"ما يفيد أن رأس مال الجهة الأم المدفوع وحقوق مساهميها لا يقل عن 2,000,000 ر.ع حسب آخر بيانات مالية مدققة.",en:"Evidence that the parent's paid-up capital and shareholders' equity are at least OMR 2,000,000 per the latest audited statements."}],
+  [{ar:"44 فروع/5",en:"44 Branch/5"},{ar:"ما يفيد التزام الجهة الأم بالإشراف على الفرع في سلطنة عمان والتزامها بالقوانين واللوائح والتعليمات المعمول بها.",en:"Evidence of the parent's commitment to supervise the Oman branch and to comply with applicable laws, regulations and instructions."}]]}
+};
+const RULES=[
+ ["36",{ar:"لا مزاولة قبل الترخيص",en:"No activity before licensing"},{ar:"لا يجوز للجهات العاملة مزاولة أي من الأنشطة المنصوص عليها في القانون أو اللائحة إلا بعد الحصول على ترخيص من الهيئة.",en:"Operating Entities may not practice any activity under the Law or the Regulations before obtaining an FSA license."}],
+ ["37",{ar:"المقر الرئيسي في سلطنة عمان",en:"Head office in Oman"},{ar:"يجب أن يكون المقر الرئيسي للجهة العاملة في سلطنة عمان، ويُستثنى من ذلك فروع الشركات الأجنبية.",en:"An Operating Entity's head office must be in the Sultanate of Oman, except for branches of foreign companies."}],
+ ["2",{ar:"لا جمع مع أنشطة أخرى",en:"No combining with other activities"},{ar:"يُحظر الجمع بين الأنشطة المرخصة وأي أنشطة أخرى. ويجوز للمصارف الجمع بين أنشطتها ونشاط الحفظ والأمانة والتعهد بالتغطية، وما عدا ذلك يكون عبر جهة عاملة مملوكة بالكامل للمصرف.",en:"Licensed activities may not be combined with any other activities. Banks may combine their business with custody and underwriting; other activities must go through an Operating Entity wholly owned by the bank."}],
+ ["38",{ar:"رأس المال لكل نشاط",en:"Capital for each activity"},{ar:"يجب على الجهة التي تطلب مزاولة أكثر من نشاط أن تستوفي الحد الأدنى لرأس المال وحقوق الملكية عن كل نشاط من الأنشطة التي تطلب ممارستها.",en:"An entity applying for more than one activity must meet the minimum capital and equity for each activity it requests."}],
+ ["41",{ar:"فروع الشركات الأجنبية",en:"Foreign company branches"},{ar:"يقتصر ترخيصها على البحث وتقديم المشورة، وتسويق الأوراق المالية غير العمانية، وإدارة الإصدارات، وأي أنشطة يوافق عليها المجلس.",en:"Licensing is limited to research and advice, marketing of non-Omani securities, issue management, and any activities approved by the Board."}],
+ ["88",{ar:"التملك فوق 20%",en:"Ownership above 20%"},{ar:"فيما عدا المصارف التجارية، لا يجوز لأي شخص تملك أكثر من 20% من الأسهم ذات حق التصويت في الجهة العاملة إلا بعد موافقة الهيئة.",en:"Except for commercial banks, no person may own more than 20% of the voting shares of an Operating Entity without FSA approval."}]
+];
+const OB=[
+ ["once",{ar:"خلال 30 يوماً من الترخيص",en:"Within 30 days of licensing"},{ar:"بدء مزاولة الأنشطة المرخصة",en:"Commence the licensed activities"},{ar:"ويجوز مد المدة لمدة مماثلة بناء على مبررات تقبلها الهيئة.",en:"Extendable for a similar period on justifications accepted by the FSA."},"47"],
+ ["once",{ar:"فور الترخيص",en:"Upon licensing"},{ar:"عرض شهادة الترخيص",en:"Display the license certificate"},{ar:"وضع الشهادة في مكان بارز في جميع مقار الجهة ومكاتبها.",en:"Place the certificate prominently in all premises and offices."},"48"],
+ ["month",{ar:"خلال 5 أيام عمل من نهاية كل شهر",en:"Within 5 working days of month-end"},{ar:"تقرير كفاية رأس المال",en:"Capital adequacy report"},{ar:"ويجوز للهيئة طلب تقارير إضافية خلال المدة التي تحددها.",en:"The FSA may request additional reports within a period it sets."},"85"],
+ ["month",{ar:"شهرياً",en:"Monthly"},{ar:"كشف أموال وأصول المتعاملين",en:"Statement of consumers' funds and assets"},{ar:"وفق النموذج المعد لذلك.",en:"On the prescribed form."},"87"],
+ ["quarter",{ar:"خلال 15 يوماً من نهاية الربع",en:"Within 15 days of quarter-end"},{ar:"بيانات مالية ربع سنوية غير مدققة",en:"Unaudited quarterly financial statements"},{ar:"عن الربع الأول والثاني والثالث، و30 يوماً للجهة التي لديها جهات تابعة.",en:"For Q1 to Q3; 30 days for entities with subsidiaries."},"84"],
+ ["year",{ar:"قبل نهاية يناير",en:"By the end of January"},{ar:"تقرير فحص الالتزام",en:"Compliance report"},{ar:"سنوياً وفق النموذج الذي تعده الهيئة، ويجوز طلبه عن فترة أقل.",en:"Annually on the FSA's form; the FSA may request one for a shorter period."},"86"],
+ ["year",{ar:"خلال شهرين من نهاية السنة المالية",en:"Within 2 months of year-end"},{ar:"البيانات المالية السنوية المدققة",en:"Audited annual financial statements"},{ar:"أو قبل 14 يوماً من انعقاد الجمعية بالنسبة لشركات المساهمة العامة.",en:"Or 14 days before the general meeting for public joint stock companies."},"84"],
+ ["year",{ar:"خلال شهرين من نهاية السنة المالية",en:"Within 2 months of year-end"},{ar:"التقرير السنوي المدقق لكفاية رأس المال",en:"Audited annual capital adequacy report"},{ar:"متضمناً رأي المدقق في كفاية نظام الجهة لضمان عدم انخفاض كفاية رأس المال.",en:"Including the auditor's opinion on whether a system is in place to keep capital adequacy above the requirement."},"85"],
+ ["year",{ar:"سنوياً",en:"Annually"},{ar:"تقرير مدقق عن فصل أموال المتعاملين",en:"Audited report on segregation of consumers' funds"},{ar:"من مراقب حسابات خارجي معتمد لدى الهيئة.",en:"By an external auditor approved by the FSA."},"87"],
+ ["year",{ar:"سنوياً",en:"Annually"},{ar:"تجديد الترخيص",en:"License renewal"},{ar:"مدة الترخيص سنة واحدة، ويُجدد بعد سداد الرسم المقرر.",en:"The license runs for one year and is renewed after paying the prescribed fee."},"45"],
+ ["event",{ar:"فور حدوثه",en:"Immediately"},{ar:"إخطار الهيئة بالتغييرات",en:"Notify the FSA of changes"},{ar:"مثل تغيير الاسم أو العنوان، أو أعضاء المجلس أو الإدارة العليا، أو مراقب الحسابات، أو أي حدث يؤثر سلباً في المركز المالي.",en:"Such as a change of name or address, Board or senior management, auditor, or any event adversely affecting the financial position."},"81"],
+ ["event",{ar:"قبل التعيين",en:"Before appointment"},{ar:"موافقة الهيئة على التعيينات",en:"FSA approval for key appointments"},{ar:"عند تعيين الرئيس التنفيذي ومن في حكمه، أو مسؤول الالتزام، أو المدير المالي.",en:"When appointing the CEO or equivalent, the compliance officer, or the financial manager."},"6"],
+ ["event",{ar:"قبل التنفيذ",en:"Before execution"},{ar:"موافقة الهيئة على رفع رأس المال أو خفضه",en:"FSA approval to increase or reduce capital"},{ar:"ثم إخطار الهيئة بشهادة القيد المحدثة من السجل التجاري.",en:"Then provide the FSA with the updated Commercial Register certificate."},"89"]
+];
+const FQ=[["all",{ar:"الكل",en:"All"}],["once",{ar:"عند البدء",en:"At start"}],["month",{ar:"شهري",en:"Monthly"}],["quarter",{ar:"ربع سنوي",en:"Quarterly"}],["year",{ar:"سنوي",en:"Annual"}],["event",{ar:"عند الحدوث",en:"On event"}]];
+const REVIEW={ar:["الطلب موقّع من صاحب الصفة ومقدَّم على النموذج المعد لدى الهيئة.","الأنشطة المطلوبة محددة ومتوافقة مع نطاق الشركة وخطة العمل.","رأس المال وحقوق الملكية مستوفيان لمجموع الأنشطة المطلوبة.","هيكل الملكية وسلسلة الملكية للمؤسس الاعتباري واضحان ومثبتان.","أعضاء المجلس والإدارة التنفيذية مستوفون للمؤهلات والخبرات.","الضمان المصرفي ووثيقة التأمين وتعيين مراقب الحسابات مستوفاة.","النظم المالية والإلكترونية واللوائح والسياسات جاهزة ومعتمدة.","الرسوم محسوبة وفق الملحق، مع الخصم الصحيح عند تعدد التراخيص."],
+ en:["Signed by an authorized person and submitted on the FSA's prescribed form.","Requested activities are defined and consistent with the company's scope and business plan.","Capital and equity meet the total for all requested activities.","Ownership structure and the chain of ownership for corporate founders are clear and evidenced.","Board members and executive management meet qualification and experience requirements.","Bank guarantee, insurance policy and auditor appointment are in place.","Financial and electronic systems, regulations and policies are ready and approved.","Fees are calculated per the Annex, with the correct multi-license discount."]};
+
+/* ---------- state ---------- */
+let cat="all",type="nat",tab="s1",fq="all";const sel=new Set(["brk","rs","pm"]);
+let st={};try{st=JSON.parse(localStorage.getItem("fsa-cl")||"{}")}catch(e){st={}}
+const save=()=>{try{localStorage.setItem("fsa-cl",JSON.stringify(st))}catch(e){}};
+const $=id=>document.getElementById(id);
+
+function bundleTotals(b){const acts=b.ids.map(i=>byId[i]);const k=acts.length,d=discount(k);return{acts,k,d,cap:acts.reduce((s,a)=>s+a.cap,0),feeRaw:acts.reduce((s,a)=>s+a.fee,0),renRaw:acts.reduce((s,a)=>s+a.ren,0),fee:acts.reduce((s,a)=>s+a.fee,0)*(1-d/100),ren:acts.reduce((s,a)=>s+a.ren,0)*(1-d/100)}}
+function chips(host,list,cur,on){host.innerHTML="";list.forEach(([k,l])=>{const b=document.createElement("button");b.type="button";b.className="chip";b.textContent=L(l);b.setAttribute("aria-pressed",k===cur);b.onclick=()=>{[...host.children].forEach(x=>x.setAttribute("aria-pressed",x===b));on(k)};host.appendChild(b)})}
+
+function drawStatic(){
+  document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+  document.title=lang==="ar"?"دليل ترخيص الجهات العاملة":"Operating Entity Licensing Guide";
+  document.querySelectorAll("[data-i]").forEach(el=>{const v=T[el.dataset.i];if(v)el.innerHTML=L(v)});
+  $("lang").textContent=lang==="ar"?"English":"العربية";$("lang").setAttribute("aria-label",lang==="ar"?"Switch to English":"التبديل إلى العربية");
+  $("steps").innerHTML=STEPS.map((s,i)=>`<article class="step"><div class="n num">${i+1}</div><h3>${L(s.t)}</h3><p>${L(s.d)}</p>${R(L(s.r))}<div class="clock"><b class="num">${s.n}</b> ${L(s.c)}</div></article>`).join("");
+  $("rules-list").innerHTML=RULES.map(r=>`<div class="rule">${R(art(r[0]))}<h3>${L(r[1])}</h3><p>${L(r[2])}</p></div>`).join("");
+  $("review-list").innerHTML=REVIEW[lang].map(x=>`<li>${esc(x)}</li>`).join("");
+  chips($("filters"),[["all",{ar:"الكل",en:"All"}],...Object.entries(CATS),["for",{ar:"متاح لفروع الشركات الأجنبية",en:"Open to foreign branches"}]],cat,k=>{cat=k;drawGrid()});
+  chips($("freq"),FQ,fq,k=>{fq=k;drawOB()});
+  const tabs=$("cl-tabs");tabs.innerHTML="";Object.entries(CL).forEach(([k,v])=>{const b=document.createElement("button");b.type="button";b.textContent=L(v.l);b.setAttribute("aria-pressed",k===tab);b.onclick=()=>{tab=k;[...tabs.children].forEach(x=>x.setAttribute("aria-pressed",x===b));drawCL()};tabs.appendChild(b)});
+  $("tiers").innerHTML=[["1–2","0%"],["3","10%"],["4","15%"],["5–6","20%"],["7–8","25%"],["9+","30%"]].map(t=>`<div><span class="num">${t[0]}</span><br><span class="num">${t[1]}</span></div>`).join("");
+  drawGrid();drawBundles();drawRows();drawCalc();drawCL();drawOB();
+}
+
+/* Explorer */
+function drawGrid(){const list=A.filter(a=>cat==="all"||(cat==="for"?a.f:a.c===cat));
+ $("grid").innerHTML=list.map(a=>`<button class="card" type="button" data-id="${a.id}"><div class="cat">${L(CATS[a.c])}${a.f?` · <span class="tag">${lang==="ar"?"متاح للفروع الأجنبية":"Open to foreign branches"}</span>`:""}</div><h3>${esc(L(a.n))}</h3><div class="kv"><div><small>${lang==="ar"?"رأس المال الأدنى":"Minimum capital"}</small><strong class="num">${fmt(a.cap)}</strong></div><div><small>${lang==="ar"?"رسم الترخيص":"License fee"}</small><strong class="num">${fmt(a.fee)}</strong></div></div><div class="more"><span>${lang==="ar"?"التفاصيل":"Details"}</span>${R(m(a.art))}</div></button>`).join("");
+ $("grid").querySelectorAll(".card").forEach(c=>c.onclick=()=>openA(c.dataset.id))}
+function drawBundles(){$("bundles").innerHTML=B.map(b=>{const t=bundleTotals(b);return `<button class="card bundle" type="button" data-b="${b.id}"><div class="cat">${lang==="ar"?`${t.k} أنشطة مجتمعة`:`${t.k} activities combined`}</div><h3>${L(b.n)}</h3><p style="font-size:14px;color:var(--ink-2)">${t.acts.map(a=>esc(L(a.n))).join(lang==="ar"?"، ":", ")}</p><div class="kv"><div><small>${lang==="ar"?"رأس المال الأدنى":"Minimum capital"}</small><strong class="num">${fmt(t.cap)}</strong></div><div><small>${lang==="ar"?`الترخيص بعد خصم ${t.d}%`:`License after ${t.d}% discount`}</small><strong class="num">${fmt(t.fee)}</strong></div></div><div class="more"><span>${lang==="ar"?"التفاصيل":"Details"}</span>${R(L(b.art))}</div></button>`}).join("");
+ document.querySelectorAll("[data-b]").forEach(c=>c.onclick=()=>openB(c.dataset.b))}
+
+const dlg=$("dlg"),db=$("dlg-body");
+function show(html){db.innerHTML=html;db.querySelector(".x").onclick=()=>dlg.close();db.querySelectorAll("[data-add]").forEach(b=>b.onclick=()=>{b.dataset.add.split(",").forEach(i=>sel.add(i));if(type==="for")setType("nat");else drawCalc();dlg.close();$("calc").scrollIntoView()});dlg.showModal();db.scrollTop=0}
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+const kv3=(a,b,c)=>`<div class="kv"><div><small>${a[0]}</small><strong class="num">${a[1]}</strong></div><div><small>${b[0]}</small><strong class="num">${b[1]}</strong></div><div><small>${c[0]}</small><strong class="num">${c[1]}</strong></div></div>`;
+const X=`<button class="x" type="button" aria-label="${lang==="ar"?"إغلاق":"Close"}">×</button>`;
+function openA(id){const a=byId[id],ar=lang==="ar";show(`<header><div><div class="eyebrow">${L(CATS[a.c])}</div><h3 id="dlg-t">${esc(L(a.n))}</h3></div><button class="x" type="button" aria-label="${ar?"إغلاق":"Close"}">×</button></header>
+${kv3([ar?"الحد الأدنى لرأس المال":"Minimum capital",fmt(a.cap)],[ar?"الترخيص لأول مرة":"Initial license",fmt(a.fee)],[ar?"التجديد السنوي":"Annual renewal",fmt(a.ren)])}
+<h4>${ar?"ما يشمله النشاط":"What it covers"}</h4><ul>${L(a.inc).map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+${a.note?`<h4>${ar?"يُراعى":"Keep in mind"}</h4><p style="font-size:15px">${esc(L(a.note))}</p>`:""}
+<h4>${ar?"المراجع":"References"}</h4><div class="refs">${R(m(a.art))}${R(ar?"ملحق الرسوم":"Fees Annex")}${a.a2?R(L(a.a2)):""}${a.f?R(art(41)):""}</div>
+<div class="acts"><button class="btn btn-p" type="button" data-add="${a.id}">${ar?"أضف إلى الحاسبة":"Add to calculator"}</button><a class="btn btn-s" href="${PORTAL}" target="_blank" rel="noopener">${ar?"قدّم عبر البوابة":"Apply via portal"}</a></div>`)}
+function openB(id){const b=B.find(x=>x.id===id),t=bundleTotals(b),ar=lang==="ar";show(`<header><div><div class="eyebrow">${ar?"نشاط مركّب":"Combined activity"}</div><h3 id="dlg-t">${L(b.n)}</h3></div><button class="x" type="button" aria-label="${ar?"إغلاق":"Close"}">×</button></header>
+<p style="margin-top:12px;color:var(--ink-2)">${ar?"يشمل مزاولة الأنشطة الآتية مجتمعة.":"Comprises the following activities combined."} ${esc(L(b.extra))}</p>
+${kv3([ar?"رأس المال (مجموع الأنشطة)":"Capital (sum of activities)",fmt(t.cap)],[ar?`الترخيص بعد خصم ${t.d}%`:`License after ${t.d}% discount`,fmt(t.fee)],[ar?"التجديد بعد الخصم":"Renewal after discount",fmt(t.ren)])}
+<h4>${ar?"الأنشطة المكوّنة":"Component activities"}</h4><ul>${t.acts.map(a=>`<li>${esc(L(a.n))} <span class="num" style="color:var(--ink-3)">· ${fmt(a.cap)} ${ar?"رأس مال":"capital"} · ${fmt(a.fee)} ${ar?"ترخيص":"license"}</span></li>`).join("")}</ul>
+<p class="fine">${ar?`مجموع رسوم الترخيص ${fmt(t.feeRaw)} والتجديد ${fmt(t.renRaw)} قبل خصم تعدد التراخيص (${t.k} تراخيص = ${t.d}%).`:`License fees total ${fmt(t.feeRaw)} and renewal ${fmt(t.renRaw)} before the multi-license discount (${t.k} licenses = ${t.d}%).`}</p>
+<h4>${ar?"المراجع":"References"}</h4><div class="refs">${R(L(b.art))}${R(art(38))}${R(ar?"ملحق الرسوم":"Fees Annex")}</div>
+<div class="acts"><button class="btn btn-p" type="button" data-add="${b.ids.join(",")}">${ar?"أضف الأنشطة إلى الحاسبة":"Add activities to calculator"}</button></div>`)}
+
+/* Calculator */
+function drawRows(){const ar=lang==="ar";
+ const q=$("quick");q.innerHTML=`<span>${ar?"إضافة سريعة:":"Quick add:"}</span>`;
+ B.forEach(b=>{const c=document.createElement("button");c.type="button";c.className="chip";c.textContent=L(b.n);c.dataset.q=b.id;c.onclick=()=>{b.ids.forEach(i=>sel.add(i));drawCalc()};q.appendChild(c)});
+ const clr=document.createElement("button");clr.type="button";clr.className="chip";clr.textContent=ar?"مسح الاختيار":"Clear";clr.onclick=()=>{sel.clear();drawCalc()};q.appendChild(clr);
+ $("rows").innerHTML=A.map(a=>`<label class="row" data-r="${a.id}"><span class="t">${esc(L(a.n))}<small class="num">${ar?"رأس المال":"Capital"} ${fmt(a.cap)} · ${ar?"ترخيص":"License"} ${fmt(a.fee)} · ${ar?"تجديد":"Renewal"} ${fmt(a.ren)}</small></span><span class="sw"><input type="checkbox" id="c-${a.id}" aria-label="${esc(L(a.n))}"><span></span></span></label>`).join("");
+ A.forEach(a=>{$("c-"+a.id).onchange=e=>{e.target.checked?sel.add(a.id):sel.delete(a.id);drawCalc()}})}
+function setType(t){type=t;$("t-nat").setAttribute("aria-pressed",t==="nat");$("t-for").setAttribute("aria-pressed",t==="for");if(t==="for")A.forEach(a=>{if(!a.f)sel.delete(a.id)});drawCalc()}
+$("t-nat").onclick=()=>setType("nat");$("t-for").onclick=()=>setType("for");
+function drawCalc(){const ar=lang==="ar";
+ A.forEach(a=>{const cb=$("c-"+a.id),r=document.querySelector(`[data-r="${a.id}"]`);const dis=type==="for"&&!a.f;cb.disabled=dis;r.classList.toggle("off",dis);r.title=dis?(ar?"غير متاح لفروع الشركات الأجنبية (م41)":"Not available to foreign branches (Art. 41)"):"";cb.checked=sel.has(a.id)});
+ document.querySelectorAll("[data-q]").forEach(c=>c.disabled=type==="for");
+ const acts=[...sel].map(i=>byId[i]);const k=acts.length,d=discount(k);
+ const lic=acts.reduce((s,a)=>s+a.fee,0),ren=acts.reduce((s,a)=>s+a.ren,0),cap=acts.reduce((s,a)=>s+a.cap,0);
+ const disc=lic*d/100,study=k?500:0,bg=type==="for"?50000:Math.min(15000,Math.max(2000,cap*0.01));
+ $("s-total").textContent=fmt(lic-disc+study);
+ $("s-count").textContent=!k?(ar?"لم تختر أي نشاط بعد":"No activity selected yet"):ar?`${k===1?"نشاط واحد":k===2?"نشاطان":k<=10?k+" أنشطة":k+" نشاطاً"}${d?` · خصم ${d}%`:" · لا خصم دون 3 تراخيص"}`:`${k} ${k===1?"activity":"activities"}${d?` · ${d}% discount`:" · no discount below 3 licenses"}`;
+ $("s-study").textContent=fmt(study);$("s-lic").textContent=fmt(lic);
+ $("s-dlbl").innerHTML=`${ar?"خصم تعدد التراخيص":"Multi-license discount"} ${d?`<span class="pill num">${d}%</span>`:""}`;
+ $("s-disc").textContent=disc?"− "+fmt(disc):"0";$("s-ren").textContent=fmt(ren*(1-d/100));$("s-cap").textContent=fmt(cap);$("s-bg").textContent=k?fmt(bg):"0";
+ $("s-parent-row").hidden=type!=="for";
+ [...$("tiers").children].forEach((el,i)=>el.classList.toggle("on",(i===0&&k>0&&k<3)||(i===1&&k===3)||(i===2&&k===4)||(i===3&&k>=5&&k<=6)||(i===4&&k>=7&&k<=8)||(i===5&&k>=9)));
+ const hits=B.filter(b=>b.ids.every(i=>sel.has(i)));const bh=$("s-bundle");
+ if(hits.length&&type==="nat"){bh.hidden=false;bh.textContent=ar?`اختيارك يشمل الأنشطة المكوّنة لـ: ${hits.map(b=>L(b.n)).join(" و")}، وتُحتسب بمجموعها.`:`Your selection covers all components of ${hits.map(b=>L(b.n)).join(" and ")}, calculated as their sum.`}else bh.hidden=true;
+ $("s-fine").textContent=type==="for"
+  ?(ar?"يُطبق على الفرع الحد الأدنى لرأس المال عن كل نشاط (م38)، ويشترط كذلك ألا يقل رأس مال الجهة الأم المدفوع وحقوق مساهميها عن 2,000,000 ر.ع (م44). الضمان المصرفي 50,000 ر.ع (م44/5-ب). رسم دراسة الطلب لا يدخل في الخصم.":"The per-activity minimum capital applies to the branch (Art. 38), and the parent's paid-up capital and shareholders' equity must be at least OMR 2,000,000 (Art. 44). Bank guarantee: OMR 50,000 (Art. 44/5-b). The review fee is not discounted.")
+  :(ar?"الضمان المصرفي 1% من رأس المال المطلوب، بحد أدنى 2,000 وأقصى 15,000 ر.ع للشركة الوطنية (م44/5)، ومحسوب هنا على الحد الأدنى لرأس المال. رسم دراسة الطلب (500 ر.ع) يُسدد مرة واحدة ولا يدخل في الخصم، ويطبق الخصم ذاته على رسوم التجديد.":"Bank guarantee: 1% of the required capital, minimum OMR 2,000 and maximum OMR 15,000 for a national company (Art. 44/5), calculated here on the minimum capital. The OMR 500 review fee is paid once and is not discounted; the same discount applies to renewal fees.");
+}
+
+/* Checklist */
+function drawCL(){const ar=lang==="ar",Ls=CL[tab].items;
+ $("cl-items").innerHTML=Ls.map((it,i)=>{const id=`${tab}-${i}`;return `<label class="it" for="k-${id}"><input type="checkbox" id="k-${id}" ${st[id]?"checked":""}><span class="box" aria-hidden="true"></span><span class="txt">${esc(L(it[1]))}${it[2]?`<details class="sub"><summary>${ar?"عرض اللوائح والسياسات المطلوبة (15)":"Show the 15 required regulations and policies"}</summary><ol>${ART5[lang].map(x=>`<li>${esc(x)}</li>`).join("")}</ol></details>`:""}</span>${R(m(L(it[0])))}</label>`}).join("");
+ $("cl-items").querySelectorAll("input").forEach(cb=>cb.onchange=()=>{st[cb.id.slice(2)]=cb.checked;save();prog()});
+ $("cl-items").querySelectorAll("details").forEach(d=>d.addEventListener("click",e=>e.stopPropagation()));prog()}
+function prog(){const Ls=CL[tab].items,done=Ls.filter((_,i)=>st[`${tab}-${i}`]).length;$("cl-count").textContent=`${done} / ${Ls.length}`;$("cl-bar").style.width=(done/Ls.length*100)+"%"}
+$("cl-reset").onclick=()=>{Object.keys(st).filter(k=>k.startsWith(tab)).forEach(k=>delete st[k]);save();drawCL()};
+function copyText(txt,btn,ok,orig){const fail=()=>{btn.textContent=lang==="ar"?"تعذر النسخ":"Couldn't copy";setTimeout(()=>btn.textContent=orig(),1800)};try{navigator.clipboard.writeText(txt).then(()=>{btn.textContent=ok;setTimeout(()=>btn.textContent=orig(),1800)},fail)}catch(e){fail()}}
+$("cl-copy").onclick=e=>{const Ls=CL[tab].items;const txt=L(CL[tab].l)+"\n"+Ls.map((it,i)=>`${st[`${tab}-${i}`]?"☑":"☐"} ${L(it[1])} (${m(L(it[0]))})`).join("\n");copyText(txt,e.currentTarget,lang==="ar"?"نُسخت القائمة":"Copied",()=>L(T.d_copy))};
+$("mail-copy").onclick=e=>{copyText("nabras.alkhanjari@fsa.gov.om",e.currentTarget,lang==="ar"?"نُسخ البريد":"Copied",()=>L(T.k_copy));try{const r=document.createRange();r.selectNodeContents($("mail"));const s=getSelection();s.removeAllRanges();s.addRange(r)}catch(_){}};
+
+/* Obligations */
+function drawOB(){$("ob").innerHTML=OB.filter(o=>fq==="all"||o[0]===fq).map(o=>`<article class="obc"><div class="when">${L(o[1])}</div><h3>${L(o[2])}</h3><p>${L(o[3])}</p>${R(art(o[4]))}</article>`).join("")}
+
+$("lang").onclick=()=>{lang=lang==="ar"?"en":"ar";try{localStorage.setItem("fsa-lang",lang)}catch(e){}if(dlg.open)dlg.close();drawStatic()};
+drawStatic();
+})();
+</script>
+
+</body>
+</html>
