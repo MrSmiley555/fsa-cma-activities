@@ -116,6 +116,8 @@ nav .btn-p{padding:6px 14px;font-size:13px;white-space:nowrap}
 .card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 .card .cat{font-size:12px;color:var(--ink-3);font-weight:600}
 .card h3{font-size:19px;line-height:1.45}
+.card .desc{font-size:14px;line-height:1.65;color:var(--ink-2);margin:-4px 0 0}
+.lead-desc{font-size:17px;line-height:1.7;color:var(--ink);margin-top:16px}
 .kv{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .card .kv{margin-top:auto}
 .kv div{background:var(--band);border-radius:var(--r-sm);padding:10px 12px;min-width:0}
@@ -468,7 +470,7 @@ const T={
  h_t:{ar:"كل ما تحتاجه للترخيص،<br>في مكان واحد.",en:"Everything you need to get licensed,<br>in one place."},
  h_lead:{ar:"استكشف الأنشطة، واحسب رأس المال والرسوم، وجهّز مستنداتك قبل التقديم عبر بوابة الهيئة. كل معلومة هنا مقرونة بمادتها من اللائحة.",en:"Explore the activities, estimate capital and fees, and prepare your documents before applying through the FSA portal. Every detail here is linked to its article in the Regulations."},
  h_c1:{ar:"استكشف الأنشطة",en:"Explore activities"},h_c2:{ar:"احسب الرسوم",en:"Estimate fees"},
- f1:{ar:"نشاطاً مرخصاً",en:"licensable activities"},f2:{ar:"مراحل حتى بدء النشاط",en:"stages to commencement"},f3:{ar:"يوم عمل للبت في كل موافقة",en:"working days per approval decision"},f4:{ar:"أقصى خصم عند تعدد التراخيص",en:"maximum multi-license discount"},
+ f1:{ar:"نشاطاً مرخصاً",en:"licensable activities"},f2:{ar:"مراحل حتى بدء النشاط",en:"stages to commencement"},f3:{ar:"يوم عمل للبت في كل موافقة",en:"working days per approval decision"},f4:{ar:"أقصى خصم عند تعدد الأنشطة",en:"maximum multi-activity discount"},
  p_eye:{ar:"مسار الترخيص",en:"Licensing process"},p_t:{ar:"أربع مراحل واضحة.",en:"Four clear stages."},p_p:{ar:"من طلب الموافقة المبدئية حتى مزاولة النشاط.",en:"From initial approval to commencing activity."},
  p_nb:{ar:"تنبيه",en:"Note"},
  p_note:{ar:"يُعتبر مضي مدة البت في طلب الترخيص دون رد رفضاً للطلب. ويجوز للهيئة منح مدة محددة لاستكمال بعض المستندات بعد الترخيص، وإلا عُدّ الترخيص ملغى من تاريخ انتهائها. <span class=\"ref\">المادة 45</span>",en:"The lapse of the decision period without a response is deemed a rejection. The FSA may grant a set period to complete some documents after licensing; otherwise the license is deemed cancelled when that period ends. <span class=\"ref\">Article 45</span>"},
@@ -538,6 +540,23 @@ const B=[
  {id:"ib",n:{ar:"بنوك الاستثمار",en:"Investment banking"},art:{ar:"المادة 40",en:"Article 40"},ids:["im","str","pm","rs","iss"],extra:{ar:"ويجوز لبنوك الاستثمار في جميع الأحوال القيام بمهام متعهد التغطية للإصدارات المعتمدة من الهيئة.",en:"Investment banks may in all cases act as underwriters for issues approved by the FSA."}}
 ];
 const byId=Object.fromEntries(A.map(a=>[a.id,a]));
+/* Plain-language summaries (نبذة مبسطة) shown above the regulation text */
+const DESC={
+ brk:{ar:"تنفيذ أوامر بيع وشراء الأوراق المالية في البورصة لحساب العملاء، مقابل عمولة.",en:"Executing clients' orders to buy and sell securities on the stock exchange, in return for a commission."},
+ mm:{ar:"الالتزام بتقديم أسعار شراء وبيع مستمرة لورقة مالية معينة، لتوفير السيولة وتسهيل التداول عليها.",en:"Committing to quote continuous buy and sell prices for a given security, providing liquidity and making it easier to trade."},
+ mrg:{ar:"تمويل جزء من قيمة الأوراق المالية التي يشتريها العميل، مع رهن هذه الأوراق ضماناً للتمويل.",en:"Financing part of the value of the securities a client buys, with those securities pledged as collateral."},
+ cus:{ar:"حفظ الأوراق المالية وأموال العملاء لدى جهة مستقلة، وإدارة الحقوق المرتبطة بها وتسوية تعاملاتها.",en:"Safekeeping clients' securities and funds with an independent entity, administering their attached rights and settling their transactions."},
+ str:{ar:"تصميم منتجات استثمارية يرتبط عائدها بأداء أوراق مالية أو مؤشرات، وإدارتها وتوزيعها على المستثمرين.",en:"Designing investment products whose returns are linked to the performance of securities or indices, and managing and distributing them to investors."},
+ pm:{ar:"إدارة استثمارات العميل في الأوراق المالية نيابة عنه، وفق سياسة استثمار متفق عليها معه.",en:"Managing a client's securities investments on their behalf, under an investment policy agreed with them."},
+ fa:{ar:"تولي الأعمال الإدارية والتشغيلية لصناديق الاستثمار، مثل إصدار الوحدات واستردادها وحساب قيمتها وحفظ سجلاتها.",en:"Running the administrative and operational side of investment funds, such as issuing and redeeming units, calculating their value and keeping records."},
+ im:{ar:"اتخاذ قرارات الاستثمار لصناديق الاستثمار الجماعي وإدارة أصولها بما يحقق مصلحة المستثمرين فيها.",en:"Making investment decisions for collective investment funds and managing their assets in the interest of their investors."},
+ iss:{ar:"مرافقة الشركات في طرح أوراقها المالية للاكتتاب، من إعداد نشرة الإصدار حتى الإدراج في البورصة.",en:"Guiding companies through offering their securities, from preparing the prospectus to listing on the stock exchange."},
+ rs:{ar:"إعداد التحليلات والبحوث عن الأوراق المالية المدرجة، وتقديم المشورة للمستثمرين بشأن الاستثمار فيها.",en:"Producing analysis and research on listed securities, and advising investors on investing in them."},
+ mk:{ar:"الترويج لأوراق مالية ومنتجات استثمارية صادرة خارج سلطنة عمان، لدى المستثمرين ذوي الخبرة داخلها.",en:"Promoting securities and investment products issued outside Oman to experienced investors in Oman."},
+ ag:{ar:"تمثيل حملة السندات أو ملاك الصكوك أو الوحدات أمام الجهة المصدرة، ومتابعة وفائها بالتزاماتها تجاههم.",en:"Representing bondholders, Sukukholders or unitholders before the issuer, and monitoring that it meets its obligations to them."},
+ am:{ar:"جهة واحدة تجمع إدارة المحافظ وإدارة استثمارات الصناديق وهيكلة المنتجات، لتدير أصول عملائها بشكل متكامل.",en:"One entity combining portfolio management, fund investment management and product structuring to manage clients' assets end to end."},
+ ib:{ar:"جهة تجمع إدارة الاستثمار والإصدارات والبحث والهيكلة، لتقدم خدمات استثمارية متكاملة للشركات والمستثمرين.",en:"An entity combining investment management, issuance, research and structuring to offer integrated investment services to companies and investors."}
+};
 const discount=k=>k>=9?30:k>=7?25:k>=5?20:k===4?15:k===3?10:0;
 
 const ART5={ar:["الهيكل التنظيمي متضمناً السلطات والمهام والمسؤوليات وطريقة رفع التقارير.","أدلة العمل واللوائح التشغيلية والأنظمة الداخلية للأنشطة المرخصة.","سياسات وخطط الطوارئ ومتابعة استمرارية الأعمال.","الدورة المستندية الواجب اتباعها.","المستويات والصلاحيات المتعلقة بالموافقة على المصروفات والنفقات.","السياسات المتعلقة بالمشتريات وعقود الخدمة.","سياسات الموارد البشرية، ومنها الرواتب والتعيين والتطوير والتدريب والترقيات وإنهاء الخدمات.","سياسة الإحلال للوظائف المعتمدة (خطة التعاقب الوظيفي).","سياسة إدارة المخاطر والالتزام وآلية التعامل مع الأطراف ذات العلاقة.","إجراءات مكافحة غسل الأموال وتمويل الإرهاب والإبلاغ عن المخالفات وحالات الاشتباه.","إجراءات سلامة المعلومات وسريتها.","السياسات الاستثمارية.","قواعد السلوك المهني.","سياسات وإجراءات النظر في شكاوى المتعاملين وحلها والإبلاغ عن المخالفات وآلية تسوية المنازعات.","أي مسائل أخرى تقررها الهيئة."],
@@ -598,7 +617,7 @@ const REVIEW={ar:["الطلب موقّع من صاحب الصفة ومقدَّم
  en:["Signed by an authorized person and submitted on the FSA's prescribed form.","Requested activities are defined and consistent with the company's scope and business plan.","Capital and equity meet the total for all requested activities.","Ownership structure and the chain of ownership for corporate founders are clear and evidenced.","Board members and executive management meet qualification and experience requirements.","Bank guarantee, insurance policy and auditor appointment are in place.","Financial and electronic systems, regulations and policies are ready and approved.","Fees are calculated per the Annex, with the correct multi-license discount."]};
 
 /* ---------- state ---------- */
-let cat="all",type="nat",tab="s1",fq="all";const sel=new Set(["brk","rs","pm"]);
+let cat="all",type="nat",tab="s1",fq="all";const sel=new Set();
 let st={};try{st=JSON.parse(localStorage.getItem("fsa-cl")||"{}")}catch(e){st={}}
 const save=()=>{try{localStorage.setItem("fsa-cl",JSON.stringify(st))}catch(e){}};
 const $=id=>document.getElementById(id);
@@ -623,9 +642,9 @@ function drawStatic(){
 
 /* Explorer */
 function drawGrid(){const list=A.filter(a=>cat==="all"||(cat==="for"?a.f:a.c===cat));
- $("grid").innerHTML=list.map(a=>`<button class="card" type="button" data-id="${a.id}"><div class="cat">${L(CATS[a.c])}${a.f?` · <span class="tag">${lang==="ar"?"متاح للفروع الأجنبية":"Open to foreign branches"}</span>`:""}</div><h3>${esc(L(a.n))}</h3><div class="kv"><div><small>${lang==="ar"?"رأس المال الأدنى":"Minimum capital"}</small><strong class="num">${fmt(a.cap)}</strong></div><div><small>${lang==="ar"?"رسم الترخيص":"License fee"}</small><strong class="num">${fmt(a.fee)}</strong></div></div><div class="more"><span>${lang==="ar"?"التفاصيل":"Details"}</span>${R(m(a.art))}</div></button>`).join("");
+ $("grid").innerHTML=list.map(a=>`<button class="card" type="button" data-id="${a.id}"><div class="cat">${L(CATS[a.c])}${a.f?` · <span class="tag">${lang==="ar"?"متاح للفروع الأجنبية":"Open to foreign branches"}</span>`:""}</div><h3>${esc(L(a.n))}</h3><p class="desc">${esc(L(DESC[a.id]))}</p><div class="kv"><div><small>${lang==="ar"?"رأس المال الأدنى":"Minimum capital"}</small><strong class="num">${fmt(a.cap)}</strong></div><div><small>${lang==="ar"?"رسم الترخيص":"License fee"}</small><strong class="num">${fmt(a.fee)}</strong></div></div><div class="more"><span>${lang==="ar"?"التفاصيل":"Details"}</span>${R(m(a.art))}</div></button>`).join("");
  $("grid").querySelectorAll(".card").forEach(c=>c.onclick=()=>openA(c.dataset.id))}
-function drawBundles(){$("bundles").innerHTML=B.map(b=>{const t=bundleTotals(b);return `<button class="card bundle" type="button" data-b="${b.id}"><div class="cat">${lang==="ar"?`${t.k} أنشطة مجتمعة`:`${t.k} activities combined`}</div><h3>${L(b.n)}</h3><p style="font-size:14px;color:var(--ink-2)">${t.acts.map(a=>esc(L(a.n))).join(lang==="ar"?"، ":", ")}</p><div class="kv"><div><small>${lang==="ar"?"رأس المال الأدنى":"Minimum capital"}</small><strong class="num">${fmt(t.cap)}</strong></div><div><small>${lang==="ar"?`الترخيص بعد خصم ${t.d}%`:`License after ${t.d}% discount`}</small><strong class="num">${fmt(t.fee)}</strong></div></div><div class="more"><span>${lang==="ar"?"التفاصيل":"Details"}</span>${R(L(b.art))}</div></button>`}).join("");
+function drawBundles(){$("bundles").innerHTML=B.map(b=>{const t=bundleTotals(b);return `<button class="card bundle" type="button" data-b="${b.id}"><div class="cat">${lang==="ar"?`${t.k} أنشطة مجتمعة`:`${t.k} activities combined`}</div><h3>${L(b.n)}</h3><p class="desc">${esc(L(DESC[b.id]))}</p><p style="font-size:13px;color:var(--ink-3)">${t.acts.map(a=>esc(L(a.n))).join(lang==="ar"?"، ":", ")}</p><div class="kv"><div><small>${lang==="ar"?"رأس المال الأدنى":"Minimum capital"}</small><strong class="num">${fmt(t.cap)}</strong></div><div><small>${lang==="ar"?`الترخيص بعد خصم ${t.d}%`:`License after ${t.d}% discount`}</small><strong class="num">${fmt(t.fee)}</strong></div></div><div class="more"><span>${lang==="ar"?"التفاصيل":"Details"}</span>${R(L(b.art))}</div></button>`}).join("");
  document.querySelectorAll("[data-b]").forEach(c=>c.onclick=()=>openB(c.dataset.b))}
 
 const dlg=$("dlg"),db=$("dlg-body");
@@ -634,13 +653,15 @@ dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
 const kv3=(a,b,c)=>`<div class="kv"><div><small>${a[0]}</small><strong class="num">${a[1]}</strong></div><div><small>${b[0]}</small><strong class="num">${b[1]}</strong></div><div><small>${c[0]}</small><strong class="num">${c[1]}</strong></div></div>`;
 const X=`<button class="x" type="button" aria-label="${lang==="ar"?"إغلاق":"Close"}">×</button>`;
 function openA(id){const a=byId[id],ar=lang==="ar";show(`<header><div><div class="eyebrow">${L(CATS[a.c])}</div><h3 id="dlg-t">${esc(L(a.n))}</h3></div><button class="x" type="button" aria-label="${ar?"إغلاق":"Close"}">×</button></header>
+<p class="lead-desc">${esc(L(DESC[a.id]))}</p>
 ${kv3([ar?"الحد الأدنى لرأس المال":"Minimum capital",fmt(a.cap)],[ar?"الترخيص لأول مرة":"Initial license",fmt(a.fee)],[ar?"التجديد السنوي":"Annual renewal",fmt(a.ren)])}
-<h4>${ar?"ما يشمله النشاط":"What it covers"}</h4><ul>${L(a.inc).map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+<h4>${ar?"ما يشمله النشاط وفق اللائحة":"What it covers under the Regulations"}</h4><ul>${L(a.inc).map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
 ${a.note?`<h4>${ar?"يُراعى":"Keep in mind"}</h4><p style="font-size:15px">${esc(L(a.note))}</p>`:""}
 <h4>${ar?"المراجع":"References"}</h4><div class="refs">${R(m(a.art))}${R(ar?"ملحق الرسوم":"Fees Annex")}${a.a2?R(L(a.a2)):""}${a.f?R(art(41)):""}</div>
 <div class="acts"><button class="btn btn-p" type="button" data-add="${a.id}">${ar?"أضف إلى الحاسبة":"Add to calculator"}</button><a class="btn btn-s" href="${PORTAL}" target="_blank" rel="noopener">${ar?"قدّم عبر البوابة":"Apply via portal"}</a></div>`)}
 function openB(id){const b=B.find(x=>x.id===id),t=bundleTotals(b),ar=lang==="ar";show(`<header><div><div class="eyebrow">${ar?"نشاط مركّب":"Combined activity"}</div><h3 id="dlg-t">${L(b.n)}</h3></div><button class="x" type="button" aria-label="${ar?"إغلاق":"Close"}">×</button></header>
-<p style="margin-top:12px;color:var(--ink-2)">${ar?"يشمل مزاولة الأنشطة الآتية مجتمعة.":"Comprises the following activities combined."} ${esc(L(b.extra))}</p>
+<p class="lead-desc">${esc(L(DESC[b.id]))}</p>
+<p style="margin-top:10px;color:var(--ink-2)">${ar?"يشمل مزاولة الأنشطة الآتية مجتمعة.":"Comprises the following activities combined."} ${esc(L(b.extra))}</p>
 ${kv3([ar?"رأس المال (مجموع الأنشطة)":"Capital (sum of activities)",fmt(t.cap)],[ar?`الترخيص بعد خصم ${t.d}%`:`License after ${t.d}% discount`,fmt(t.fee)],[ar?"التجديد بعد الخصم":"Renewal after discount",fmt(t.ren)])}
 <h4>${ar?"الأنشطة المكوّنة":"Component activities"}</h4><ul>${t.acts.map(a=>`<li>${esc(L(a.n))} <span class="num" style="color:var(--ink-3)">· ${fmt(a.cap)} ${ar?"رأس مال":"capital"} · ${fmt(a.fee)} ${ar?"ترخيص":"license"}</span></li>`).join("")}</ul>
 <p class="fine">${ar?`مجموع رسوم الترخيص ${fmt(t.feeRaw)} والتجديد ${fmt(t.renRaw)} قبل خصم تعدد التراخيص (${t.k} تراخيص = ${t.d}%).`:`License fees total ${fmt(t.feeRaw)} and renewal ${fmt(t.renRaw)} before the multi-license discount (${t.k} licenses = ${t.d}%).`}</p>
@@ -663,7 +684,7 @@ function drawCalc(){const ar=lang==="ar";
  const lic=acts.reduce((s,a)=>s+a.fee,0),ren=acts.reduce((s,a)=>s+a.ren,0),cap=acts.reduce((s,a)=>s+a.cap,0);
  const disc=lic*d/100,study=k?500:0,bg=type==="for"?50000:Math.min(15000,Math.max(2000,cap*0.01));
  $("s-total").textContent=fmt(lic-disc+study);
- $("s-count").textContent=!k?(ar?"لم تختر أي نشاط بعد":"No activity selected yet"):ar?`${k===1?"نشاط واحد":k===2?"نشاطان":k<=10?k+" أنشطة":k+" نشاطاً"}${d?` · خصم ${d}%`:" · لا خصم دون 3 تراخيص"}`:`${k} ${k===1?"activity":"activities"}${d?` · ${d}% discount`:" · no discount below 3 licenses"}`;
+ $("s-count").textContent=!k?(ar?"اختر نشاطاً أو أكثر لتظهر لك التكلفة":"Choose one or more activities to see the cost"):ar?`${k===1?"نشاط واحد":k===2?"نشاطان":k<=10?k+" أنشطة":k+" نشاطاً"}${d?` · خصم ${d}%`:" · لا خصم دون 3 تراخيص"}`:`${k} ${k===1?"activity":"activities"}${d?` · ${d}% discount`:" · no discount below 3 licenses"}`;
  $("s-study").textContent=fmt(study);$("s-lic").textContent=fmt(lic);
  $("s-dlbl").innerHTML=`${ar?"خصم تعدد التراخيص":"Multi-license discount"} ${d?`<span class="pill num">${d}%</span>`:""}`;
  $("s-disc").textContent=disc?"− "+fmt(disc):"0";$("s-ren").textContent=fmt(ren*(1-d/100));$("s-cap").textContent=fmt(cap);$("s-bg").textContent=k?fmt(bg):"0";
